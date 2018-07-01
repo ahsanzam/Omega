@@ -43,15 +43,61 @@
 		width:100%;
 		position:relative;
 	}
+	#dosanddonts{
+		margin-top:15px; 
+		margin-bottom:15px; 
+		text-align:center; 
+		font-style:italic; 
+		cursor:pointer;
+		color:blue;
+	}
+	#dosanddontscontainer{
+		height:100vh;
+		width:100vw;
+		background-color:rgba(104,105,99,.6);
+		position:fixed;
+		top:0;
+		left:0;
+	}
+	#dosanddontsbox{
+		width:70vw;
+		height:65vh;
+		position:fixed;
+		top:50%;
+		left:50%;
+		border:1px solid black;
+		transform: translate(-50%, -50%);
+		background-color:white;
+		overflow:scroll;
+	}
+	#dosanddontsbox > h4, h2{
+		width:100%;
+		text-align:center;
+	}
+	#dosanddontsbox > p{
+		padding:10px;
+		text-align:justify;
+	}
 </style>
 <div id="interviewee-selectionView-container">
-<div id="chosenPerson">
-	<h3 class="sub-titles" style="margin-top:15px; margin-bottom:15px; text-align:center;">Please select an interviewee.</h3>
-	<h2 class="sub-titles" id="name" >Selected person</h2>
-	<h3 class="sub-titles" id="pos">Position</h3>
-	<div id="personImage"></div>
+	<div id="chosenPerson">
+		<h3 class="sub-titles" style="margin-top:15px; margin-bottom:15px; text-align:center;">Please select an interviewee.</h3>
+		<h2 class="sub-titles" id="name" >Selected person</h2>
+		<h3 class="sub-titles" id="pos">Position</h3>
+		<div id="personImage"></div>
+		<div class="sub-titles" id="dosanddonts">Do's and Don'ts</div>
+	</div>
+	<div id="orgGraph">
+	</div>
 </div>
-<div id="orgGraph">
-</div>
+
+<div id="dosanddontscontainer" hidden>
+	<div class="sub-titles" id="dosanddontsbox">
+		<h2>Guidelines for Interviews</h2>
+		<h4>Do's</h4>
+		<p id="dos"></p>
+		<h4>Don'ts</h4>
+		<p id="donts"></p>
+	</div>
 </div>
 	

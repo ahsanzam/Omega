@@ -58,6 +58,22 @@ IntervieweeSelectionView.prototype.onAddToApplication = function()
 			interviewee.timeRemaining =parseInt(interviewee["time"])*60;// this.options.interviewTimeLimit;
 		}
 	}
+	function setUpdosanddonts(data){
+		$("#dos").html(data['good']);
+		$("#donts").html(data['bad']);
+		$('#dosanddonts').click(()=>{$('#dosanddontscontainer').attr('hidden',false)});
+		$('<div class="floaterExitButton"></div>').appendTo('#dosanddontsbox').click(()=>{$('#dosanddontscontainer').attr('hidden',true)});
+		$("#dosanddontscontainer").click(()=>{$('#dosanddontscontainer').attr('hidden',true)});
+		$('#dosanddontsbox').click(function(event){event.stopPropagation()});
+	}
+	$.ajax({
+	  dataType: "json",
+	  url: "json/dosdonts.json",
+	  success:function(data){
+		setUpdosanddonts(data);
+	  },
+	  error: function(){ alert('Invalid JSON or org_chart file missing.') }
+	});
 }
 
 /**
