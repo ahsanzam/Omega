@@ -65,9 +65,9 @@ OmegaIntervieweeSelectionView.prototype.onAddToApplication = function()
 		data['bad'].forEach(function(obj){
 			$("<li></li>").html(obj).appendTo("#donts");
 		});
-		$('#dosanddonts').click(()=>{$('#dosanddontscontainer').attr('hidden',false)});
-		$('<div class="floaterExitButton"></div>').appendTo('#dosanddontsbox').click(()=>{$('#dosanddontscontainer').attr('hidden',true)});
-		$("#dosanddontscontainer").click(()=>{$('#dosanddontscontainer').attr('hidden',true)});
+		$('#dosanddonts').click(function () {$('#dosanddontscontainer').attr('hidden',false)});
+		$('<div class="floaterExitButton"></div>').appendTo('#dosanddontsbox').click(function () {$('#dosanddontscontainer').attr('hidden',true)});
+		$("#dosanddontscontainer").click(function () {$('#dosanddontscontainer').attr('hidden',true)});
 		$('#dosanddontsbox').click(function(event){event.stopPropagation()});
 	}
 	$.ajax({

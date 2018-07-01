@@ -77,19 +77,21 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 			}
 			let video_location = question.responseVideo;
 			//check if selected video exists, if not, show error message
-			window.style.checkIfFileExists(video_location, ()=>{
+			window.style.checkIfFileExists(video_location, function () {
 				$(".video-error").show();
 				scope.stopClock();
 			});
 			
 			// Play the response video
-			scope.DOMObject.find(".interview-video").attr('src',video_location);
-			scope.DOMObject.find(".interview-video")[0].currentTime = scope.application.interviewees[scope.options.interviewee.name][question.prompt];
+			let video = scope.DOMObject.find(".interview-video");
+			video.attr('src',video_location);
+			if (video[0].currentTime !== undefined)
+				video[0].currentTime = scope.application.interviewees[scope.options.interviewee.name][question.prompt];
 			scope.currQuestion = question;
 			scope.answeringQuestion = true; 
 
 			// Disable the question only when video is finished
-			scope.DOMObject.find(".interview-video").on('ended',()=>{
+			scope.DOMObject.find(".interview-video").on('ended', function () {
 				if (scope.currQuestion && scope.currQuestion.endInterview) {
 					interviewee.timeRemaining = 0;
 				}
