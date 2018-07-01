@@ -90,6 +90,9 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 
 			// Disable the question only when video is finished
 			scope.DOMObject.find(".interview-video").on('ended',()=>{
+				if (scope.currQuestion && scope.currQuestion.endInterview) {
+					interviewee.timeRemaining = 0;
+				}
 				scope.lastVideoEndTime = scope.options.interviewee.timeRemaining;
 				if(scope.idleVideo){
 					scope.idleVideo = undefined; 
@@ -98,11 +101,14 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 				if (!scope.options.canRepeat)
 				{
 					scope.answeringQuestion = false;
-					question.disabled = true;
-					$(this).toggleClass("question-disabled", question.disabled == true);
-					// scope.stopClock();
 				}
 			});
+			
+			if (!scope.options.canRepeat)
+			{
+				question.disabled = true;
+				$(this).parents(".question").toggleClass("question-disabled", question.disabled == true);
+			}
 
 			// Start the clock, if necessary
 			if (!scope.isClockRunning())

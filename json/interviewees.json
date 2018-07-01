@@ -17,7 +17,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Mr. Stevens, I don't want to take your time any more than I need to. I'm here to ask you some questions about your job and how things are going in Omega in general. Can we begin?",
@@ -25,7 +25,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Good morning Mr. Stevens. Thanks for inviting us to meet with you. We are pleased to be in consideration as consultants to your company.",
@@ -33,7 +33,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Omega has a long and proud tradition.  What generated that success?",
@@ -41,7 +41,7 @@
                 "type": "s",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you see your role at Omega?",
@@ -49,7 +49,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "You and your hardware manager have the reputation of being technological pioneers, but as CEO most of your responsibilities are probably administrative. Do you still find the role of CEO personally fulfilling?",
@@ -57,7 +57,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Whose fault was it that SuperSonic failed? Who was too slow? Was it Production? Marketing? Engineering? Who was responsible for the console not making it to market?",
@@ -65,7 +65,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Market Research believes that Omega should expand its product offerings to include a lower-priced version of your video game console to target younger and more economically-minded consumers. What do you think of that idea?",
@@ -73,7 +73,7 @@
                 "type": "o",
                 "fuqstn": "true",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are your most essential duties as CEO of Omega?",
@@ -81,7 +81,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think of the job your management team is doing?",
@@ -89,7 +89,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How often do you meet with the members of your management team?",
@@ -97,7 +97,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How is your personal relationship with members of your management team?",
@@ -105,7 +105,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How well do the members of your management team get along with one another?",
@@ -113,7 +113,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What factors led to your decision to pull out of the previous version of the SuperSonic project?",
@@ -121,7 +121,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "6",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the challenges facing Omega as a whole?",
@@ -129,7 +129,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What is your management philosophy?",
@@ -137,7 +137,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think should be done to improve the way things work at Omega?",
@@ -145,7 +145,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are you expecting from us in terms of consulting advice?",
@@ -153,7 +153,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Omega produces a home console, games for that console, PC games, and also arcade games. How much of your net profits comes from each of these product lines?",
@@ -161,7 +161,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "So tell me, how do we go from the initial idea to the product out the door? What are the steps in between?",
@@ -169,7 +169,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that market research really gets it right in understanding what your customers want?",
@@ -177,7 +177,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Have you ever thought about improving communication in your company through cross-functional teams?",
@@ -185,7 +185,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "You seem to give more attention to R and D than the other departments. Are they facing particular challenges we should know about?",
@@ -193,7 +193,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Your Software Design Manager tells us that innovation in software is where the future of this industry lies, but that all the attention is given to hardware in your company. Do you think he\"s wrong?",
@@ -201,7 +201,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "This has been very helpful.  Is there anything else you think I should know?",
@@ -209,7 +209,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -217,7 +217,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know. Who do you suggest I interview next?",
@@ -225,7 +225,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     },
@@ -247,7 +247,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Hi Henry.  I'm sure you have a lot to do.  Should we get this thing over with?",
@@ -255,7 +255,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "We're here to evaluate your department and see where things are going wrong.  Can we get started?",
@@ -263,7 +263,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "In the context of a gaming company, what does an engineering department do?",
@@ -271,7 +271,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you see your role in your department?",
@@ -279,7 +279,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as the main challenges your department faces?",
@@ -287,7 +287,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as Omega's competitive advantages?",
@@ -295,7 +295,7 @@
                 "type": "s",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Engineering usually plays a central role in the production and development process.  You probably have some unique insights about what could be done to address some of those challenges Omega is facing.  Can you tell me about them?",
@@ -303,7 +303,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How open would you be to change the way you do things to accommodate the needs of some of the other departments?",
@@ -311,7 +311,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the problems facing Omega as a whole?",
@@ -319,7 +319,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Are there any policies that can help this organization work better?",
@@ -327,7 +327,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think should be done to improve coordination between departments at Omega?",
@@ -335,7 +335,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Does Engineering have difficulties communicating with any of the other departments?",
@@ -343,7 +343,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How is your relationship with the other executives?",
@@ -351,7 +351,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who is to blame for the setbacks that Omega has been having?",
@@ -359,7 +359,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How's morale in your department?",
@@ -367,7 +367,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What's it like for you to work at Omega?",
@@ -375,7 +375,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who else in this company do you think we should talk to?",
@@ -383,7 +383,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What can your department do to help ensure the next Omega release occurs on time?",
@@ -391,7 +391,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that the CEO plays favorites?",
@@ -399,7 +399,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "If production is not following the Design Document, is it their fault or yours?",
@@ -407,7 +407,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "This has been very helpful.  Is there anything else you think I should know?",
@@ -415,7 +415,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -423,7 +423,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -431,7 +431,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     },
@@ -453,7 +453,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "I don't want to take your time any more than I need to.  I'm here to ask you some questions about your job and how things are going in Omega in general.   Can we begin?",
@@ -461,7 +461,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "You're the VP of R and D, right?  May I ask your name?",
@@ -469,7 +469,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How long have you been with Omega?",
@@ -477,7 +477,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What background experience do you bring to your position?",
@@ -485,7 +485,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What does your department do?",
@@ -493,7 +493,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Omega is well-known for its innovation in both software and hardware.  You're responsible for supervising both of these teams.  How do you manage the two simultaneously?",
@@ -501,7 +501,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you see your role in your department?",
@@ -509,7 +509,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "It seems like there might be a conflict between the innovation process, which is never-ending, and a commercial product that at some point must have a finish date.  When do you know when R and D is done working on a product?  Are you guided by calendar deadlines?  Do you have some other way of making this determination?",
@@ -517,7 +517,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "We keep hearing that you're constantly trying to make last-minute changes to the product, which makes things difficult for other departments.  Is that true?",
@@ -525,7 +525,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as Omega's competitive advantages?",
@@ -533,7 +533,7 @@
                 "type": "s",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How open would you be to change the way you do things to accommodate the needs of some of the other departments?",
@@ -541,7 +541,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Ok, so what are your problems?",
@@ -549,7 +549,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as the main challenges your department faces?",
@@ -557,7 +557,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What is your management philosophy?",
@@ -565,7 +565,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who do you think is responsible for the problems R and D has had in meeting milestones?",
@@ -573,7 +573,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What can be done in your department to help ensure that the product is released on time?",
@@ -581,7 +581,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "If you were in my shoes, what would you recommend Omega do?",
@@ -589,7 +589,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think should be done to improve coordination between departments at Omega?",
@@ -597,7 +597,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Does R and D have difficulties communicating with any of the other departments?",
@@ -605,7 +605,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Why do you think the departments here have such a hard time communicating with one another?",
@@ -613,7 +613,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How is your relationship with the other executives?",
@@ -621,7 +621,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "So what's the newest and greatest at R and D right now?",
@@ -629,7 +629,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How's morale in your department?",
@@ -637,7 +637,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who else in this company do you think we should talk to?",
@@ -645,7 +645,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are you expecting from us in terms of consulting advice?",
@@ -653,7 +653,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "We heard there were some problems with faulty products when you launched the Dreamweaver system.  Do you think that problem was in engineering, production, or quality control?",
@@ -661,7 +661,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Why does the CEO spend so much more time at R and D than with the rest of the company?",
@@ -669,7 +669,7 @@
                 "type": "b",
                 "fuqstn": "true",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that the CEO plays favorites with your department?",
@@ -677,7 +677,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Your Software Design Manager tells us that innovation in software is where the future of this industry lies, but that all the attention is given to hardware in your company.  Do you think that's true?",
@@ -685,7 +685,7 @@
                 "type": "o",
                 "fuqstn": "true",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "This has been very helpful.  Is there anything else you think I should know?",
@@ -693,7 +693,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -701,7 +701,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -709,7 +709,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     },
@@ -731,7 +731,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "I don't want to take your time any more than I need to.  I'm here to ask you some questions about your job and how things are going in Omega in general.   Can we begin?",
@@ -739,7 +739,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "I finally get to meet the famous old timer!",
@@ -747,7 +747,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How long have you been with Omega?",
@@ -755,7 +755,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you like your job here?",
@@ -763,7 +763,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Given the fast-paced development of the video game industry?  Is it possible your technology is becoming outdated?",
@@ -771,7 +771,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-20",
-                "ko": "true"
+                "endInterview": "true"
             },
             {
                 "prompt": "In the context of the highly competitive, fast-evolving gaming industry, what does your department do?",
@@ -779,7 +779,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "You've been here for a long time.  They call you the \"Grandfather of Gaming\".  You must know this industry inside and out.  What do you think has been the key to Omega's success?",
@@ -787,7 +787,7 @@
                 "type": "s",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How open would you be to change the way you do things to accommodate the needs of some of the other departments?",
@@ -795,7 +795,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "In an earlier interview, someone argued that some of Omega's problems come from favoritism the CEO has towards you personally.   Do you think the CEO plays favorites with you?",
@@ -803,7 +803,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think Omega effectively balances the needs and concerns of all departments?  Are any of the departments more highly favored than others?",
@@ -811,7 +811,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as the main challenges your department faces?",
@@ -819,7 +819,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the challenges facing Omega as a whole?",
@@ -827,7 +827,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Which other departments do you work with?",
@@ -835,7 +835,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who do you think is responsible for the problems Omega is having?",
@@ -843,7 +843,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think can help this organization work better?",
@@ -851,7 +851,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Does Hardware have difficulties communicating with any of the other departments?",
@@ -859,7 +859,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that, in general, departments within Omega communicate with each other effectively?",
@@ -867,7 +867,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How is your relationship with the other executives?",
@@ -875,7 +875,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Is R and D to blame for the setbacks that Omega has been having?",
@@ -883,7 +883,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Why is the current project behind schedule?",
@@ -891,7 +891,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "To the best of your knowledge, do the other departments understand the importance of innovation to Omega?",
@@ -899,7 +899,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How's morale in your department?",
@@ -907,7 +907,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "3",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What's it like for you to work at Omega?",
@@ -915,7 +915,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Thank you for your time.  Is there anything else you think I should know?",
@@ -923,7 +923,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -931,7 +931,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -939,7 +939,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     },
@@ -961,7 +961,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "So, you're the \"production guy\", right?",
@@ -969,7 +969,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How long have you been with Omega?",
@@ -977,7 +977,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Can you walk us through the production process?",
@@ -985,7 +985,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you see your role in your department",
@@ -993,7 +993,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as the main challenges your department faces?",
@@ -1001,7 +1001,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the challenges facing Omega as a whole?",
@@ -1009,7 +1009,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Does the production department have anything to do with the product delays Omega is experiencing with the new project?",
@@ -1017,7 +1017,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What can be done in your department to help ensure that the product is released on time?",
@@ -1025,7 +1025,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as Omega's strengths?",
@@ -1033,7 +1033,7 @@
                 "type": "s",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How open would you be to change the way you do things to accommodate the needs of some of the other departments?",
@@ -1041,7 +1041,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Which other departments do you work with?",
@@ -1049,7 +1049,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who do you think is responsible for the problems Omega is having?",
@@ -1057,7 +1057,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Are there any policies or procedures that you think can help this organization work better?",
@@ -1065,7 +1065,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Can your communication with any members of the management team be improved?",
@@ -1073,7 +1073,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think of the VP of Engineering?",
@@ -1081,7 +1081,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How many more home video game consoles do you think R and D's latest graphics innovation will result in?  You know -  the one that put the project behind schedule.",
@@ -1089,7 +1089,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What should we do to get Omega back on track?",
@@ -1097,7 +1097,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "I understand that there were some problems with Dreamweaver that resulted in returned products and negative publicity.  Were these problems within your department?",
@@ -1105,7 +1105,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How's morale in your department?",
@@ -1113,7 +1113,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What's it like for you to work at Omega?",
@@ -1121,7 +1121,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that the CEO plays favorites?",
@@ -1129,7 +1129,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Are the needs of every department equally appreciated within the organization?",
@@ -1137,7 +1137,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you do while you're waiting for the new console to be developed?",
@@ -1145,7 +1145,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "The VP of Engineering came by here earlier and basically trashed your department.  He said you guys don't know how to read blueprints.  Do you think that's true?",
@@ -1153,7 +1153,7 @@
                 "type": "p",
                 "fuqstn": "true",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How often do you meet with the other members of the management team?",
@@ -1161,7 +1161,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Anything else...?",
@@ -1169,7 +1169,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "This has been very helpful.  Is there anything else you think I should know?",
@@ -1177,7 +1177,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -1185,7 +1185,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     },
@@ -1207,7 +1207,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "I don't want to take your time any more than I need to.  I'm here to ask you some questions about your job and how things are going in Omega in general.   Can we begin?",
@@ -1215,7 +1215,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Hi, we're here to evaluate your department and see where things are going wrong.  May we get started?",
@@ -1223,7 +1223,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How long have you been with Omega?",
@@ -1231,7 +1231,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What background experience do you bring to your position?",
@@ -1239,7 +1239,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "In the context of the highly competitive, fast-evolving gaming industry, what does your department do?",
@@ -1247,7 +1247,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you see your role in your department",
@@ -1255,7 +1255,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as the main challenges your department faces?",
@@ -1263,7 +1263,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as Omega's competitive advantages?",
@@ -1271,7 +1271,7 @@
                 "type": "s",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "As VP of Sales you probably have keen insight about the shortcomings of Omega's products and its inability to meet launch dates.  What do you think should be done to address some of the challenges Omega is facing?",
@@ -1279,7 +1279,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How open would you be to change the way you do things to accommodate the needs of some of the other departments?",
@@ -1287,7 +1287,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think needs to be done to get this place in shape?",
@@ -1295,7 +1295,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the problems facing Omega as a whole?",
@@ -1303,7 +1303,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Which other departments do you work with?",
@@ -1311,7 +1311,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who do you think is responsible for the problems Omega is having?",
@@ -1319,7 +1319,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "We were told by another Vice President that the CEO gives his old friend, the Hardware Manager, free reign to do whatever he wants,  and that this is the reason why the process of console development keeps stalling.  Do you agree with that assessment?",
@@ -1327,7 +1327,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-20",
-                "ko": "true"
+                "endInterview": "true"
             },
             {
                 "prompt": "Are there any policies that you think can help this organization work better?",
@@ -1335,7 +1335,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Does Sales have difficulties communicating with any other departments?",
@@ -1343,7 +1343,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that any of the other departments within Omega have difficulties communicating with one another?",
@@ -1351,7 +1351,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Why is the current project behind schedule?",
@@ -1359,7 +1359,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How's morale in your department?",
@@ -1367,7 +1367,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What's it like for you to work at Omega?",
@@ -1375,7 +1375,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that the CEO plays favorites?",
@@ -1383,7 +1383,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "This has been very helpful.  Is there anything else you think I should know?",
@@ -1391,7 +1391,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -1399,7 +1399,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -1407,7 +1407,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think of the new VP of R and D?  Do you think she'll last long?",
@@ -1415,7 +1415,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How many more home video game consoles do you think R and D's latest graphics innovation - the one that put the project behind schedule - will result in?  Do you think the setback was worth it?",
@@ -1423,7 +1423,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What's the first thing that should be done to get Omega back on track?",
@@ -1431,7 +1431,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     },
@@ -1453,7 +1453,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "We're here to evaluate your department and see where things are going wrong.  Can we get started?",
@@ -1461,7 +1461,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Buenos Dias.",
@@ -1469,7 +1469,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How long have you been with Omega?",
@@ -1477,7 +1477,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "In the context of the highly competitive, fast-evolving gaming industry, what does your department do?",
@@ -1485,7 +1485,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you see your role in your department?",
@@ -1493,7 +1493,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as the main challenges your department faces?",
@@ -1501,7 +1501,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as Omega's competitive advantages?",
@@ -1509,7 +1509,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What would help your department improve your quality control analysis?",
@@ -1517,7 +1517,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How open would you be to change the way you do things to accommodate the needs of some of the other departments?",
@@ -1525,7 +1525,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think needs to be done to get this place in shape?",
@@ -1533,7 +1533,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the problems facing Omega as a whole?",
@@ -1541,7 +1541,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Which other departments do you work with?",
@@ -1549,7 +1549,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who do you think is responsible for the problems Omega is having?",
@@ -1557,7 +1557,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "There were well-known difficulties with your Dreamweaver product - lots of returns because of defective products.  Was Quality Control responsible for this?",
@@ -1565,7 +1565,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What can Quality Control do to help Omega ship quality products (products with a low defect rate) out in a timely fashion?",
@@ -1573,7 +1573,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Does Quality Control have difficulties communicating with any of the other departments?",
@@ -1581,7 +1581,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Where do you think the future of innovation lies - hardware or software?",
@@ -1589,7 +1589,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What's the first thing that should be done to get Omega back on track?",
@@ -1597,7 +1597,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think should be done to improve coordination between departments at Omega?",
@@ -1605,7 +1605,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Why is the current project behind schedule?",
@@ -1613,7 +1613,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How's morale in your department?",
@@ -1621,7 +1621,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What's it like for you to work at Omega?",
@@ -1629,7 +1629,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "This has been very helpful.  Is there anything else you think I should know?",
@@ -1637,7 +1637,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -1645,7 +1645,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -1653,7 +1653,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     },
@@ -1675,7 +1675,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "I don't want to take your time any more than I need to.  I'm here to ask you some questions about your job and how things are going in Omega in general.   Can we begin?",
@@ -1683,7 +1683,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "So, you're the software guy, right?",
@@ -1691,7 +1691,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How long have you been with Omega?",
@@ -1699,7 +1699,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "3",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you like your job here?",
@@ -1707,7 +1707,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "In the context of the highly competitive, fast-evolving gaming industry, what does your department do?",
@@ -1715,7 +1715,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that Omega should change the way it does things to give more emphasis to innovation in software?",
@@ -1723,7 +1723,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as Omega's competitive advantages?",
@@ -1731,7 +1731,7 @@
                 "type": "s",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think should be done to get Omega back on track?",
@@ -1739,7 +1739,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How open would you be to change the way you do things to accommodate the needs of some of the other departments?",
@@ -1747,7 +1747,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the challenges facing your department?",
@@ -1755,7 +1755,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the challenges facing Omega as a whole?",
@@ -1763,7 +1763,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Which other departments do you work with?",
@@ -1771,7 +1771,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who do you think is responsible for the problems Omega is having?",
@@ -1779,7 +1779,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Are there any policies that can help this organization work better?",
@@ -1787,7 +1787,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Does Software have difficulties communicating with any other members of the organization?",
@@ -1795,7 +1795,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How effective is communication between departments at Omega?",
@@ -1803,7 +1803,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How is your relationship with the other executives?",
@@ -1811,7 +1811,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Hypothetically, if Omega stopped making its own video game console, would the software department be able to make games for other consoles like Playstation and Xbox?",
@@ -1819,7 +1819,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How's morale in your department?",
@@ -1827,7 +1827,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What background experience do you bring to your position?",
@@ -1835,7 +1835,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "This has been very helpful.  Is there anything else you think I should know?",
@@ -1843,7 +1843,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -1851,7 +1851,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -1859,7 +1859,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     },
@@ -1881,7 +1881,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "I don't want to take your time any more than I need to.  I'm here to ask you some questions about your job and how things are going in Omega in general.   Can we begin?",
@@ -1889,7 +1889,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "So, you're the marketing lady, right?",
@@ -1897,7 +1897,7 @@
                 "type": "i",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How long have you been with Omega?",
@@ -1905,7 +1905,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "In the context of a gaming company, what does a market research department do?",
@@ -1913,7 +1913,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How do you see your role in your department?",
@@ -1921,7 +1921,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you see as Omega's competitive advantages?",
@@ -1929,7 +1929,7 @@
                 "type": "s",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How open would you be to change the way you do things to accommodate the needs of some of the other departments?",
@@ -1937,7 +1937,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What do you think needs to be done to get this place in shape?",
@@ -1945,7 +1945,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "-1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What are the challenges facing your department?",
@@ -1953,7 +1953,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Are there any additional market segments that Omega should be targeting?",
@@ -1961,7 +1961,7 @@
                 "type": "o",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Which other departments do you work with?",
@@ -1969,7 +1969,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Who do you think is responsible for the problems Omega is having?",
@@ -1977,7 +1977,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "-2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Does Market Research have difficulties communicating with any of the other departments?",
@@ -1985,7 +1985,7 @@
                 "type": "p",
                 "fuqstn": "false",
                 "score": "4",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "Do you think that departments within Omega communicate with each other effectively?",
@@ -1993,7 +1993,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "How's morale in your department?",
@@ -2001,7 +2001,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "What's it like for you to work at Omega?",
@@ -2009,7 +2009,7 @@
                 "type": "b",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "This has been very helpful.  Is there anything else you think I should know?",
@@ -2017,7 +2017,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "2",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -2025,7 +2025,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "0",
-                "ko": "false"
+                "endInterview": "false"
             },
             {
                 "prompt": "That's all I need to know.  Who would you suggest I interview next?",
@@ -2033,7 +2033,7 @@
                 "type": "c",
                 "fuqstn": "false",
                 "score": "1",
-                "ko": "false"
+                "endInterview": "false"
             }
         ]
     }
