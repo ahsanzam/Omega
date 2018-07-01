@@ -9,10 +9,12 @@ var InterviewApplication = function(container, toStyle) {
 	
 	let interviewees = <?php require(__DIR__ . "/../json/interviewees.json"); ?>;
 	
-	let selectionView = new IntervieweeSelectionView({
+	let selectionView = new OmegaIntervieweeSelectionView({
 		interviewees: interviewees,
+		interviewViewType: OmegaInterviewView,
 		interviewViewOptions: {
-			canInterrupt: false
+			canInterrupt: false,
+			backPrompt: "Back"
 		}
 	});
 	

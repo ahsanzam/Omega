@@ -2,8 +2,11 @@
 <link rel="shortcut icon" href="/assets/favicon.ico">
 <script>
 	<?php
-		require_once(__DIR__ . "/js/include.js");
+		require_once($_SERVER['LIBDIR'] . '/Interviewer/include.js');
+		
 		require_once(__DIR__ . "/js/InterviewApplication.js");
+		require_once(__DIR__ . "/js/OmegaIntervieweeSelectionView.js");
+		require_once(__DIR__ . "/js/OmegaInterviewView.js");
 	?>
 	
 	$(function() {		

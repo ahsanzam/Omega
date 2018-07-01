@@ -3,24 +3,24 @@
  * A view that presents a list of interviewees for the user to choose from.
  * @class
  * @extends StackView
- * @param {IntervieweeSelectionView~Options} options - An object of keyed options for initializing the view.
+ * @param {OmegaIntervieweeSelectionView~Options} options - An object of keyed options for initializing the view.
  */
-var IntervieweeSelectionView = function(options) {
+var OmegaIntervieweeSelectionView = function(options) {
 	StackView.call(this, options);
 }
-extend(StackView, IntervieweeSelectionView);
+extend(StackView, OmegaIntervieweeSelectionView);
 
 /**
- * @typedef {Object} IntervieweeSelectionView~Options
+ * @typedef {Object} OmegaIntervieweeSelectionView~Options
  * @property {Interviewee[]} options.interviewees - The interviewees. All the most important data is here.
  * @property {number} [options.interviewTimeLimit=300] - The time limit for an interview, in seconds.
  * @property {function(new:InterviewView, Object.<string, *>)} [options.interviewViewType=InterviewView] - The type of InterviewView to use. Must inherit from InterviewView.
  * @property {Object.<string, *>} [options.interviewViewOptions={}] - The options with which to initialize InterviewViews. 'interviewee' will be set automatically.
  */
 /**
- * @property {IntervieweeSelectionView~Options} options - An object of keyed options for the view.
+ * @property {OmegaIntervieweeSelectionView~Options} options - An object of keyed options for the view.
  */
-IntervieweeSelectionView.prototype.options = {
+OmegaIntervieweeSelectionView.prototype.options = {
 	interviewees: undefined,
 	interviewTimeLimit: 10,
 	interviewViewType: InterviewView,
@@ -31,19 +31,19 @@ IntervieweeSelectionView.prototype.options = {
  * @property {string} HTMLSource - The HTML source for this view.
  * @override
  */
-IntervieweeSelectionView.prototype.HTMLSource = "<?php StackViewSource() ?>";
+OmegaIntervieweeSelectionView.prototype.HTMLSource = "<?php StackViewSource() ?>";
 
 /**
  * @property {string} styles - A CSS string containing styles for this view.
  * @override
  */
-IntervieweeSelectionView.prototype.styles = "<?php FileContents(__DIR__ . '/styles.css') ?>";
+OmegaIntervieweeSelectionView.prototype.styles = "<?php FileContents(__DIR__ . '/styles.css') ?>";
 
 /**
  * This function is called when the view is first shown.
  * @override
  */
-IntervieweeSelectionView.prototype.onAddToApplication = function()
+OmegaIntervieweeSelectionView.prototype.onAddToApplication = function()
 {	
 	let scope = this;
 
@@ -84,7 +84,7 @@ IntervieweeSelectionView.prototype.onAddToApplication = function()
  * This function is called whenever the view was previously not shown, but now is shown.
  * @override
  */
-IntervieweeSelectionView.prototype.onShow = function()
+OmegaIntervieweeSelectionView.prototype.onShow = function()
 {
 	if(this.orgChartMade) return;
 	
@@ -101,7 +101,7 @@ IntervieweeSelectionView.prototype.onShow = function()
 	});
 }
 
-IntervieweeSelectionView.prototype.showDetails = function(selectedPersonPosition){
+OmegaIntervieweeSelectionView.prototype.showDetails = function(selectedPersonPosition){
 	selectedPerson = undefined;
 	for(var i in this.options.interviewees){
 		if(this.options.interviewees[i]['title'] == selectedPersonPosition)
@@ -125,7 +125,7 @@ IntervieweeSelectionView.prototype.showDetails = function(selectedPersonPosition
 	this.selectedPerson = selectedPerson;
 }
 
-IntervieweeSelectionView.prototype.transitionToInterview = function(selectedPersonPosition){
+OmegaIntervieweeSelectionView.prototype.transitionToInterview = function(selectedPersonPosition){
 	var selectedPerson = undefined;
 	for(var i in this.options.interviewees){
 		if(this.options.interviewees[i]['title'] == selectedPersonPosition)
@@ -146,7 +146,7 @@ IntervieweeSelectionView.prototype.transitionToInterview = function(selectedPers
 /**
  * This function is called to create the graph nodes, links, and layout
  */
-IntervieweeSelectionView.prototype.ChartMaker = function(container, data){
+OmegaIntervieweeSelectionView.prototype.ChartMaker = function(container, data){
 	// false=vertical, true=horizontal
 	let orientation = false;
 	let scope = this;
@@ -154,7 +154,6 @@ IntervieweeSelectionView.prototype.ChartMaker = function(container, data){
 	var margin = {top: 40, right: 30, bottom: 20, left: 30},
 		width = $(container).width() - margin.right - margin.left,
 		height = $(container).height() - margin.top - margin.bottom;
-
 
 	var i = 0, duration = 750, root;
 
