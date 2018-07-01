@@ -72,7 +72,7 @@
 		right:5px;
 		top:5px;
 		cursor:pointer;
-		background-image:url('../assets/cancel.png');
+		background-image:url('assets/cancel.png');
 		background-size:cover;
 	}
 	#chartHeader{
