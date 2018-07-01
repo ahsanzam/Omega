@@ -71,7 +71,7 @@ IntervieweeSelectionView.prototype.onShow = function()
 	let scope = this;
 	$.ajax({
 	  dataType: "json",
-	  url: "org_chart.json",
+	  url: "../json/org_chart.json",
 	  success:function(data){
   			scope.ChartMaker("#orgGraph",data);
   			scope.showDetails(scope.options.interviewees[0]['title']);

@@ -1,13 +1,13 @@
 /**
- * The InterviewTest application.
+ * The Interview application.
  * @class
  * @extends StackApplication
  * @param {DOMObject} container - The HTML object in which the application should place its views.
  */
-var InterviewTestApplication = function(container, toStyle) {
+var InterviewApplication = function(container, toStyle) {
 	StackApplication.call(this, container);
 	
-	let interviewees = <?php require(__DIR__ . "/interviewees.json"); ?>;
+	let interviewees = <?php require(__DIR__ . "/../json/interviewees.json"); ?>;
 	
 	let selectionView = new IntervieweeSelectionView({
 		interviewees: interviewees,
@@ -38,4 +38,4 @@ var InterviewTestApplication = function(container, toStyle) {
 	window.style = new Styling();
 	this.show(textView);
 }
-extend(StackApplication, InterviewTestApplication);
+extend(StackApplication, InterviewApplication);

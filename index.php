@@ -2,12 +2,12 @@
 
 <script>
 	<?php
-		require_once(__DIR__ . '/include.js');
-		require_once(__DIR__ . '/InterviewTestApplication.js');
+		require_once(__DIR__ . '/js/include.js');
+		require_once(__DIR__ . "/js/InterviewApplication.js");
 	?>
 	
 	$(function() {		
-		let application = new InterviewTestApplication($("#application"));
+		let application = new InterviewApplication($("#application"));
 		
 		window.application = application;
 	});
@@ -74,4 +74,4 @@
 		}
 	}
 </style>
-<link rel="stylesheet" type="text/css" href="styleSheet.css">
+<link rel="stylesheet" type="text/css" href="../js/styleSheet.css">
