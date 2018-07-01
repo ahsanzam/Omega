@@ -116,7 +116,7 @@ OmegaIntervieweeSelectionView.prototype.showDetails = function(selectedPersonPos
 
 	 //empty previous circle if colored in
 	if(this.currentlySelectedNode)
-		d3.select(this.currentlySelectedNode).select('circle').style("fill", "fff");
+		d3.select(this.currentlySelectedNode).select('circle').style("fill", "white");
 
 	//find person's position on orgChart and color it in
 	this.currentlySelectedNode = d3.select("#orgGraph svg").selectAll("g.node")[0].filter(function(d,i){ return d.textContent === selectedPerson['title']})[0];
