@@ -72,6 +72,7 @@ InterviewView.prototype.onAddToApplication = function()
 {
 	let scope = this;
 	let interviewee = this.options.interviewee;
+	this.firstQuestion = true;
 	if(!this.application.interviewees[this.options.interviewee.name])
 		this.application.interviewees[this.options.interviewee.name] = {};
 
@@ -81,6 +82,8 @@ InterviewView.prototype.onAddToApplication = function()
 	pt.find(".question-button").click(function() {
 		let id = $(this).parents(".question").attr("question-id");
 		let question = interviewee.questions[id];
+		scope.lastVideoEndTime = undefined
+		window.userScore += parseInt(question['score']); //accumulate user score
 
 		if (!interviewee.disabled &amp;&amp; !question.disabled)
 		{
@@ -88,32 +91,42 @@ InterviewView.prototype.onAddToApplication = function()
 			$(".video-prompt").prop("hidden",true);
 			$(".video-error").hide();
 			$(".interview-video").prop("hidden",false);
-			
-			if(scope.isClockRunning()){	//if we have just switched to a new question
+			if(scope.firstQuestion){ 
+				scope.flashTimeInstruction();
+				scope.firstQuestion = false;
+			}
+			if(scope.answeringQuestion){	//if we have just switched to a new question
 				//if you cannot interrupt this speaker
 				if(!scope.options.canInterrupt) return;
 				//if the previous video has not finished playing, save the point where it was paused
 				scope.application.interviewees[scope.options.interviewee.name][scope.currQuestion.prompt] = scope.DOMObject.find(".interview-video")[0].currentTime; 
 			}
-
+			let video_location = question.responseVideo;
 			//check if selected video exists, if not, show error message
-			window.style.checkIfFileExists(interviewee.videoDirectory + question.responseVideo, ()=>{
+			window.style.checkIfFileExists(video_location, ()=>{
 				$(".video-error").show();
 				scope.stopClock();
 			});
 			
 			// Play the response video
-			scope.DOMObject.find(".interview-video").attr('src',interviewee.videoDirectory + question.responseVideo);
+			scope.DOMObject.find(".interview-video").attr('src',video_location);
 			scope.DOMObject.find(".interview-video")[0].currentTime = scope.application.interviewees[scope.options.interviewee.name][question.prompt];
 			scope.currQuestion = question;
+			scope.answeringQuestion = true; 
 
 			// Disable the question only when video is finished
 			scope.DOMObject.find(".interview-video").on('ended',()=>{
+				scope.lastVideoEndTime = scope.options.interviewee.timeRemaining;
+				if(scope.idleVideo){
+					scope.idleVideo = undefined; 
+					return;
+				}
 				if (!scope.options.canRepeat)
 				{
+					scope.answeringQuestion = false;
 					question.disabled = true;
 					$(this).toggleClass("question-disabled", question.disabled == true);
-					scope.stopClock();
+					// scope.stopClock();
 				}
 			});
 
@@ -134,8 +147,7 @@ InterviewView.prototype.onAddToApplication = function()
 					.removeClass("question-prototype")
 					.addClass("question")
 					.attr("question-id", i);
-		if(!(i%2)) //add a border between the questions
-			$(obj).css("border-bottom","1px solid black"); 
+		$(obj).css("border-bottom","1px solid black"); 
 		obj.appendTo(pt.parent());
 		if(!this.application.interviewees[this.options.interviewee.name][question.prompt])	//set pausedAt value to 0 (initial) if not already set
 			this.application.interviewees[this.options.interviewee.name][question.prompt] = 0; 
@@ -164,8 +176,8 @@ InterviewView.prototype.onShow = function()
 	let orgChartAttrs = {"pos":interviewee.title, "img":interviewee.profileImage, "name":interviewee.name}
 	
 	// Header
-	this.DOMObject.find(".name").text(interviewee.name).click(orgChartAttrs,window.orgChart.showChart);
-	this.DOMObject.find(".title").text(interviewee.title).click(orgChartAttrs,window.orgChart.showChart);
+	this.DOMObject.find(".name").text(interviewee.name);
+	this.DOMObject.find(".title").text(interviewee.title);
 	
 	// Questions
 	this.DOMObject.find(".question").each(function() {
@@ -179,6 +191,14 @@ InterviewView.prototype.onShow = function()
 	
 	// Clock
 	this.updateTimeRemaining();
+}
+
+
+/**
+ * Flashes warning that timer begins now
+ */
+InterviewView.prototype.flashTimeInstruction = function(){
+	$(".time-container").animate({ backgroundColor:"#F3DE8A"},1500,function(){ $(".time-container").animate({ backgroundColor:"transparent"}, 1500) });
 }
 
 /**
@@ -195,7 +215,7 @@ InterviewView.prototype.onHide = function()
 InterviewView.prototype.updateTimeRemaining = function()
 {
 	let interviewee = this.options.interviewee;
-		
+
 	this.DOMObject.find(".time").text(formatTime(interviewee.timeRemaining));
 	
 	this.DOMObject.toggleClass("interview-view-disabled", interviewee.disabled == true);
@@ -227,12 +247,22 @@ InterviewView.prototype.startClock = function()
 	}
 }
 
+InterviewView.prototype.playIdleVideo = function(scope){
+	scope.lastVideoEndTime = undefined;
+	scope.idleVideo = true;
+	scope.DOMObject.find(".interview-video").attr('src',scope.options.interviewee['idle_video']);
+}
 /**
  * Tick the clock forward by one second.
  */
 InterviewView.prototype.tickClock = function(scope)
 {
 	let interviewee = scope.options.interviewee;
+
+	if(scope.lastVideoEndTime!=undefined &amp;&amp; (scope.lastVideoEndTime - interviewee.timeRemaining) > 5){
+		//play idle video
+		scope.playIdleVideo(scope);
+	}
 	
 	if (interviewee.timeRemaining > 0)
 	{
@@ -269,13 +299,13 @@ InterviewView.prototype.stopClock = function()
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="IntervieweeSelectionView.html">IntervieweeSelectionView</a></li><li><a href="InterviewView.html">InterviewView</a></li><li><a href="OrgChart.html">OrgChart</a></li><li><a href="StackApplication.html">StackApplication</a></li><li><a href="StackView.html">StackView</a></li><li><a href="Styling.html">Styling</a></li><li><a href="TextMessageView.html">TextMessageView</a></li><li><a href="VideoMessageView.html">VideoMessageView</a></li></ul><h3>Global</h3><ul><li><a href="global.html#extend">extend</a></li><li><a href="global.html#formatTime">formatTime</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="IntervieweeSelectionView.html">IntervieweeSelectionView</a></li><li><a href="InterviewView.html">InterviewView</a></li><li><a href="StackApplication.html">StackApplication</a></li><li><a href="StackView.html">StackView</a></li><li><a href="Styling.html">Styling</a></li><li><a href="TextMessageView.html">TextMessageView</a></li><li><a href="VideoMessageView.html">VideoMessageView</a></li></ul><h3>Global</h3><ul><li><a href="global.html#extend">extend</a></li><li><a href="global.html#formatTime">formatTime</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jun 24 2018 14:59:01 GMT-0700 (PDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Jun 30 2018 21:15:25 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -26,7 +26,8 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
+            <pre class="prettyprint source linenums"><code>
+/**
  * A view that presents a list of interviewees for the user to choose from.
  * @class
  * @extends StackView
@@ -51,7 +52,7 @@ IntervieweeSelectionView.prototype.options = {
 	interviewees: undefined,
 	interviewTimeLimit: 10,
 	interviewViewType: InterviewView,
-	interviewViewOptions: {}
+	interviewViewOptions: {},
 };
  
 /**
@@ -74,39 +75,6 @@ IntervieweeSelectionView.prototype.onAddToApplication = function()
 {	
 	let scope = this;
 
-	let pt = this.DOMObject.find(".interviewee-prototype");
-
-	// Setup the click handler
-	pt.find(".button").click(function() {
-		let id = $(this).parents(".interviewee").attr("interviewee-id");
-		let interviewee = scope.options.interviewees[id];
-		if (interviewee.disabled) return;
-
-		let options = Object.assign({ interviewee: scope.options.interviewees[id] }, scope.options.interviewViewOptions);
-		
-		// Create and push an InterviewView
-		let interviewView = Object.create(scope.options.interviewViewType.prototype);
-		scope.options.interviewViewType.call(interviewView, options);
-		
-		scope.selectedIntervieweeID = id;
-		scope.application.push(interviewView, {"transition":"slideLeft"});
-	});
-	
-	// Make empty copies of the prototype
-	for (let i in this.options.interviewees)
-	{
-		let interviewee = this.options.interviewees[i];
-		
-		let obj = pt.clone(true)
-					.removeClass("interviewee-prototype")
-					.addClass("interviewee")
-					.attr("interviewee-id", i);
-		obj.appendTo(pt.parent());
-	}
-	
-	// Hide the prototype
-	pt.hide();
-	
 	// Initialize the interviewees object
 	for (let i in this.options.interviewees)
 	{
@@ -115,7 +83,7 @@ IntervieweeSelectionView.prototype.onAddToApplication = function()
 		// Set interview time limit
 		if (interviewee.timeRemaining === undefined)
 		{
-			interviewee.timeRemaining = this.options.interviewTimeLimit;
+			interviewee.timeRemaining =parseInt(interviewee["time"])*60;// this.options.interviewTimeLimit;
 		}
 	}
 }
@@ -126,41 +94,161 @@ IntervieweeSelectionView.prototype.onAddToApplication = function()
  */
 IntervieweeSelectionView.prototype.onShow = function()
 {
+	if(this.orgChartMade) return;
+	
 	let scope = this;
-	this.DOMObject.find(".interviewee").each(function() {
-		let id = $(this).attr("interviewee-id");
-		let interviewee = scope.options.interviewees[id];
-		let orgChartAttrs = {"pos":interviewee.title, "img":interviewee.profileImage, "name":interviewee.name}
-		
-		$(this).find(".name").text(interviewee.name);
-		$(this).find(".title").text(interviewee.title)
-		$(this).find(".title").click(orgChartAttrs, window.orgChart.showChart);
-		$(this).find(".image").attr("src", interviewee.profileImage);
-		$(this).find(".time").text(formatTime(interviewee.timeRemaining));
-		
-		$(this).toggleClass("interviewee-disabled", interviewee.disabled == true);
+	$.ajax({
+	  dataType: "json",
+	  url: "../json/org_chart.json",
+	  success:function(data){
+  			scope.ChartMaker("#orgGraph",data);
+  			scope.showDetails(scope.options.interviewees[0]['title']);
+  			scope.orgChartMade = true;
+	  },
+	  error: function(){ alert('Invalid JSON or org_chart file missing.') }
 	});
 }
 
-/**
- * @property {(boolean|number)} selectedIntervieweeID - The ID of the interviewee that was selected, or false if no interviewee is currently selected.
- * @see onPopTo
- */
-IntervieweeSelectionView.prototype.selectedIntervieweeID = false;
+IntervieweeSelectionView.prototype.showDetails = function(selectedPersonPosition){
+	selectedPerson = undefined;
+	for(var i in this.options.interviewees){
+		if(this.options.interviewees[i]['title'] == selectedPersonPosition)
+			selectedPerson = this.options.interviewees[i];
+	}
+	if(selectedPerson == undefined) return;
+
+	//get and set selected person's position, name, and image
+	$("#chosenPerson > #name").html(selectedPerson['name']);
+	$("#chosenPerson > #pos").html(selectedPerson['title']);
+	$("#chosenPerson > #personImage").css("background-image","url("+selectedPerson['profileImage']+")");
+
+	 //empty previous circle if colored in
+	if(this.currentlySelectedNode)
+		d3.select(this.currentlySelectedNode).select('circle').style("fill", "fff");
+
+	//find person's position on orgChart and color it in
+	this.currentlySelectedNode = d3.select("#orgGraph svg").selectAll("g.node")[0].filter(function(d,i){ return d.textContent === selectedPerson['title']})[0];
+	d3.select(this.currentlySelectedNode).select('circle').style("fill", "red"); //set the fill of person's node to red
+
+	this.selectedPerson = selectedPerson;
+}
+
+IntervieweeSelectionView.prototype.transitionToInterview = function(selectedPersonPosition){
+	var selectedPerson = undefined;
+	for(var i in this.options.interviewees){
+		if(this.options.interviewees[i]['title'] == selectedPersonPosition)
+			selectedPerson = this.options.interviewees[i];
+	}
+	if(selectedPerson == undefined) return;
+	if (selectedPerson.disabled) return;
+
+	let options = Object.assign({ interviewee: selectedPerson }, this.options.interviewViewOptions);
+	
+	// Create and push an InterviewView
+	let interviewView = Object.create(this.options.interviewViewType.prototype);
+	this.options.interviewViewType.call(interviewView, options);
+	
+	this.application.push(interviewView, {"transition":"slideLeft"});
+}
 
 /**
- * This function is called (before onShow) when this view is popped back to from an InterviewView.
- * @param {Interviewee} interviewee - The updated Interviewee passed back from the InterviewView.
+ * This function is called to create the graph nodes, links, and layout
  */
-IntervieweeSelectionView.prototype.onPopTo = function(interviewee)
-{
-	if (this.selectedIntervieweeID !== false)
-	{
-		this.options.interviewees[this.selectedIntervieweeID] = interviewee;
-		
-		this.selectedIntervieweeID = false;
+IntervieweeSelectionView.prototype.ChartMaker = function(container, data){
+	// false=vertical, true=horizontal
+	let orientation = false;
+	let scope = this;
+	// ************** Generate the tree diagram	 *****************
+	var margin = {top: 40, right: 30, bottom: 20, left: 30},
+		width = $(container).width() - margin.right - margin.left,
+		height = $(container).height() - margin.top - margin.bottom;
+
+
+	var i = 0, duration = 750, root;
+
+	var tree = d3.layout.tree().size([width, height]).separation(function(a, b) { return (a.parent == b.parent ? 1 : 2); });
+
+	var horizontalTree = function(d){ return [d.y, d.x] },
+		verticalTree = function(d){ return [d.x, d.y] },
+		verticalTransition = function(d) { return "translate(" + d.y + "," + d.x + ")"; },
+		horizontalTransition = function(d) { return "translate(" + d.x + "," + d.y + ")"; };
+	var diagonal = d3.svg.diagonal().projection(orientation ? horizontalTree : verticalTree);
+
+	var svg = d3.select(container).append("svg").attr("width", width + margin.right + margin.left).attr("height", height + margin.top + margin.bottom)
+	  			.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	root = data[0];
+	root.x0 = width / 2;
+	root.y0 = 0;
+	  
+	update(root);
+
+	function update(source) {
+
+		// Compute the new tree layout.
+		var nodes = tree.nodes(root).reverse(),
+			links = tree.links(nodes);
+
+		// Normalize for fixed-depth.
+		nodes.forEach(function(d) { d.y = d.depth * 180; });
+
+		// Update the nodes…
+		var node = svg.selectAll("g.node").data(nodes, function(d) { return d.id || (d.id = ++i); }).attr("margin",10);
+
+		// Enter any new nodes at the parent's previous position.
+		var nodeEnter = node.enter()
+							.append("g")
+							.attr("class", "node")
+							.attr("transform", function(d) { return "translate(" + source.x0 + "," + source.y0 + ")"; })
+							.on("mouseover",hover)
+							.on("click",click); 
+
+		nodeEnter.append("circle").attr("r", 1e-6).style("fill-opacity", 1);
+
+		nodeEnter.append("foreignObject")
+				    .attr("width", 70)
+				    .attr("height", 20).attr("x", 15).attr("y",-15)//function(d) { return d.children || d._children ? -13 : 13; })
+					.attr("dy", ".2em")
+					.attr("text-anchor", "bottom")//function(d) { return d.children || d._children ? "end" : "start"; })
+					.text(function(d) { return d.name; })
+
+		// Transition nodes to their new position.
+		var nodeUpdate = node.transition().duration(duration).attr("transform", orientation ? verticalTransition : horizontalTransition);
+
+		nodeUpdate.select("circle").attr("r", 10).style("cursor","pointer");
+
+		nodeUpdate.select("foreignObject").style("fill-opacity", 1).style("cursor","pointer");
+
+		// Update the links…
+		var link = svg.selectAll("path.link").data(links, function(d) { return d.target.id; });
+
+		// Enter any new links at the parent's previous position.
+		link.enter().insert("path", "g")
+			.attr("class", "link")
+			.attr("d", function(d) {
+				var o = {x: source.x0, y: source.y0};
+				return diagonal({source: o, target: o});
+			});
+
+		// Transition links to their new position.
+		link.transition().duration(duration).attr("d", diagonal);
+
+		// Transition exiting nodes to the parent's new position.
+		link.exit().transition().duration(duration)
+			.attr("d", function(d) {
+				var o = {x: source.x, y: source.y};
+				return diagonal({source: o, target: o});
+			}).remove();
+	}
+
+	function hover(d){
+		scope.showDetails(d['name']);
+	}
+	function click(d){
+		scope.transitionToInterview(d['name']);
 	}
 }
+
 </code></pre>
         </article>
     </section>
@@ -171,13 +259,13 @@ IntervieweeSelectionView.prototype.onPopTo = function(interviewee)
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="IntervieweeSelectionView.html">IntervieweeSelectionView</a></li><li><a href="InterviewView.html">InterviewView</a></li><li><a href="OrgChart.html">OrgChart</a></li><li><a href="StackApplication.html">StackApplication</a></li><li><a href="StackView.html">StackView</a></li><li><a href="Styling.html">Styling</a></li><li><a href="TextMessageView.html">TextMessageView</a></li><li><a href="VideoMessageView.html">VideoMessageView</a></li></ul><h3>Global</h3><ul><li><a href="global.html#extend">extend</a></li><li><a href="global.html#formatTime">formatTime</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="IntervieweeSelectionView.html">IntervieweeSelectionView</a></li><li><a href="InterviewView.html">InterviewView</a></li><li><a href="StackApplication.html">StackApplication</a></li><li><a href="StackView.html">StackView</a></li><li><a href="Styling.html">Styling</a></li><li><a href="TextMessageView.html">TextMessageView</a></li><li><a href="VideoMessageView.html">VideoMessageView</a></li></ul><h3>Global</h3><ul><li><a href="global.html#extend">extend</a></li><li><a href="global.html#formatTime">formatTime</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jun 24 2018 14:59:01 GMT-0700 (PDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Jun 30 2018 21:15:25 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>

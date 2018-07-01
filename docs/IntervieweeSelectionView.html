@@ -142,7 +142,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line7">line 7</a>
+        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line8">line 8</a>
     </li></ul></dd>
     
 
@@ -646,132 +646,12 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line22">line 22</a>
+        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line23">line 23</a>
     </li></ul></dd>
     
 
     
 
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="selectedIntervieweeID"><span class="type-signature"></span>selectedIntervieweeID<span class="type-signature"></span></h4>
-
-
-
-
-
-
-
-
-
-
-    <h5 class="subsection-title">Properties:</h5>
-
-    
-
-<table class="props">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>selectedIntervieweeID</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">boolean</span>
-|
-
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The ID of the interviewee that was selected, or false if no interviewee is currently selected.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line121">line 121</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-    <dt class="tag-see">See:</dt>
-    <dd class="tag-see">
-        <ul>
-            <li>onPopTo</li>
-        </ul>
-    </dd>
     
 
     
@@ -1072,6 +952,92 @@
     
 
     
+    <h4 class="name" id="ChartMaker"><span class="type-signature"></span>ChartMaker<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    This function is called to create the graph nodes, links, and layout
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line129">line 129</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
     <h4 class="name" id="onAddToApplication"><span class="type-signature"></span>onAddToApplication<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
@@ -1254,7 +1220,7 @@
     
 
     
-    <h4 class="name" id="onPopTo"><span class="type-signature"></span>onPopTo<span class="signature">(interviewee)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="onPopTo"><span class="type-signature">(abstract) </span>onPopTo<span class="signature">(returnValue)</span><span class="type-signature"></span></h4>
     
 
     
@@ -1262,7 +1228,7 @@
 
 
 <div class="description">
-    This function is called (before onShow) when this view is popped back to from an InterviewView.
+    This function is called (before onShow) when this view is popped back to.
 </div>
 
 
@@ -1298,13 +1264,13 @@
 
         <tr>
             
-                <td class="name"><code>interviewee</code></td>
+                <td class="name"><code>returnValue</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#Interviewee">Interviewee</a></span>
+<span class="param-type">*</span>
 
 
             
@@ -1314,7 +1280,7 @@
 
             
 
-            <td class="description last">The updated Interviewee passed back from the InterviewView.</td>
+            <td class="description last">A value of any type that was passed to the pop function of the StackApplication.</td>
         </tr>
 
     
@@ -1333,10 +1299,8 @@
     
 
     
-
-    
-    <dt class="tag-overrides">Overrides:</dt>
-    <dd class="tag-overrides"><ul class="dummy"><li>
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
         <a href="StackView.html#onPopTo">StackView#onPopTo</a>
     </li></ul></dd>
     
@@ -1358,9 +1322,11 @@
     
 
     
+
+    
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line127">line 127</a>
+        <a href="StackView.js.html">StackView.js</a>, <a href="StackView.js.html#line95">line 95</a>
     </li></ul></dd>
     
 
@@ -1896,7 +1862,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line12">line 12</a>
+        <a href="IntervieweeSelectionView.js.html">IntervieweeSelectionView.js</a>, <a href="IntervieweeSelectionView.js.html#line13">line 13</a>
     </li></ul></dd>
     
 
@@ -1926,13 +1892,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="IntervieweeSelectionView.html">IntervieweeSelectionView</a></li><li><a href="InterviewView.html">InterviewView</a></li><li><a href="OrgChart.html">OrgChart</a></li><li><a href="StackApplication.html">StackApplication</a></li><li><a href="StackView.html">StackView</a></li><li><a href="Styling.html">Styling</a></li><li><a href="TextMessageView.html">TextMessageView</a></li><li><a href="VideoMessageView.html">VideoMessageView</a></li></ul><h3>Global</h3><ul><li><a href="global.html#extend">extend</a></li><li><a href="global.html#formatTime">formatTime</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="IntervieweeSelectionView.html">IntervieweeSelectionView</a></li><li><a href="InterviewView.html">InterviewView</a></li><li><a href="StackApplication.html">StackApplication</a></li><li><a href="StackView.html">StackView</a></li><li><a href="Styling.html">Styling</a></li><li><a href="TextMessageView.html">TextMessageView</a></li><li><a href="VideoMessageView.html">VideoMessageView</a></li></ul><h3>Global</h3><ul><li><a href="global.html#extend">extend</a></li><li><a href="global.html#formatTime">formatTime</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jun 24 2018 14:59:01 GMT-0700 (PDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Jun 30 2018 21:15:25 GMT-0700 (PDT)
 </footer>
 
 <script> prettyPrint(); </script>

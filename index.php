@@ -51,20 +51,20 @@
 	#left-brand{
 		position:relative; /*needs at least one element with position:relative to give parent div height*/
 		left:0;
-		background-image:url('./../assets/Formal_Marshall_ELC_CardOnGold.jpg');
+		background-image:url('assets/Formal_Marshall_ELC_CardOnGold.jpg');
 	}
 	#right-brand{
 		top:4px;
 		width:60px;
 		right:5px;
-		background-image:url('./../assets/JFF-ELC-Mouse-Pad-CIRCLE.png');
+		background-image:url('assets/JFF-ELC-Mouse-Pad-CIRCLE.png');
 	}
 	@media screen and (max-width: 800px) {
 		#body{ background-color:black; }
 		#brand{
 			width:30px;
 			height:30px;
-			background-image:url('./../assets/shield.jpg');
+			background-image:url('assets/shield.jpg');
 			background-repeat:no-repeat;
 			background-size:contain;
 			cursor:pointer;
@@ -74,4 +74,4 @@
 		}
 	}
 </style>
-<link rel="stylesheet" type="text/css" href="../js/styleSheet.css">
+<link rel="stylesheet" type="text/css" href="js/styleSheet.css">
