@@ -1,0 +1,146 @@
+[
+	{
+		"name": "John Smith",
+		"title": "CEO",
+		"profileImage": "images/smith.jpg",
+		"videoDirectory": "videos/smith/",
+		"questions": [
+			{
+				"prompt": "Good morning, Smith. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Smith, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	},
+	{
+		"name": "Carol Clark",
+		"title": "V.P. Engineering",
+		"profileImage": "images/carol.jpg",
+		"videoDirectory": "videos/clark/",
+		"questions": [
+			{
+				"prompt": "Good morning, Clark. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Clark, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	},
+	{
+		"name": "Jocelyn Stockton",
+		"title": "Manager Hardware Development",
+		"profileImage": "images/jocelyn.jpeg",
+		"videoDirectory": "videos/clark/",
+		"questions": [
+			{
+				"prompt": "Good morning, Stockton. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Stockton, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	},
+	{
+		"name": "Walter Man",
+		"title": "Manager Software Design",
+		"profileImage": "images/walter.jpg",
+		"videoDirectory": "videos/clark/",
+		"questions": [
+			{
+				"prompt": "Good morning, Man. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Man, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	},
+	{
+		"name": "Anderson Havenforth",
+		"title": "V.P. Research and Development",
+		"profileImage": "images/havenforth.jpg",
+		"videoDirectory": "videos/clark/",
+		"questions": [
+			{
+				"prompt": "Good morning, Havenforth. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Havenforth, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	},
+	{
+		"name": "James Mackeroon",
+		"title": "V.P. Production",
+		"profileImage": "images/james.jpeg",
+		"videoDirectory": "videos/clark/",
+		"questions": [
+			{
+				"prompt": "Good morning, Mackeroon. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Mackeroon, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	},
+	{
+		"name": "Amie Earhart",
+		"title": "Manager Quality Control",
+		"profileImage": "images/earhart.jpeg",
+		"videoDirectory": "videos/clark/",
+		"questions": [
+			{
+				"prompt": "Good morning, Earhart. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Earhart, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	},
+	{
+		"name": "William Riker",
+		"title": "V.P. Sales and Promotion",
+		"profileImage": "images/riker.jpg",
+		"videoDirectory": "videos/clark/",
+		"questions": [
+			{
+				"prompt": "Good morning, Riker. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Riker, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	},
+	{
+		"name": "Jim Hamilton",
+		"title": "Manager Marketing Research",
+		"profileImage": "images/hamilton.jpeg",
+		"videoDirectory": "videos/clark/",
+		"questions": [
+			{
+				"prompt": "Good morning, Hamilton. How are you?",
+				"responseVideo": "good_morning.mp4"
+			},
+			{
+				"prompt": "So, Hamilton, what do you do around here?",
+				"responseVideo": "what_do_you_do.mp4"
+			}
+		]
+	}
+]

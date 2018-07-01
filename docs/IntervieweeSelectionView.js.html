@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: IntervieweeSelectionView.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: IntervieweeSelectionView.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * A view that presents a list of interviewees for the user to choose from.
+ * @class
+ * @extends StackView
+ * @param {IntervieweeSelectionView~Options} options - An object of keyed options for initializing the view.
+ */
+var IntervieweeSelectionView = function(options) {
+	StackView.call(this, options);
+}
+extend(StackView, IntervieweeSelectionView);
+
+/**
+ * @typedef {Object} IntervieweeSelectionView~Options
+ * @property {Interviewee[]} options.interviewees - The interviewees. All the most important data is here.
+ * @property {number} [options.interviewTimeLimit=300] - The time limit for an interview, in seconds.
+ * @property {function(new:InterviewView, Object.&lt;string, *>)} [options.interviewViewType=InterviewView] - The type of InterviewView to use. Must inherit from InterviewView.
+ * @property {Object.&lt;string, *>} [options.interviewViewOptions={}] - The options with which to initialize InterviewViews. 'interviewee' will be set automatically.
+ */
+/**
+ * @property {IntervieweeSelectionView~Options} options - An object of keyed options for the view.
+ */
+IntervieweeSelectionView.prototype.options = {
+	interviewees: undefined,
+	interviewTimeLimit: 10,
+	interviewViewType: InterviewView,
+	interviewViewOptions: {}
+};
+ 
+/**
+ * @property {string} HTMLSource - The HTML source for this view.
+ * @override
+ */
+IntervieweeSelectionView.prototype.HTMLSource = "&lt;?php StackViewSource() ?>";
+
+/**
+ * @property {string} styles - A CSS string containing styles for this view.
+ * @override
+ */
+IntervieweeSelectionView.prototype.styles = "&lt;?php FileContents(__DIR__ . '/styles.css') ?>";
+
+/**
+ * This function is called when the view is first shown.
+ * @override
+ */
+IntervieweeSelectionView.prototype.onAddToApplication = function()
+{	
+	let scope = this;
+
+	let pt = this.DOMObject.find(".interviewee-prototype");
+
+	// Setup the click handler
+	pt.find(".button").click(function() {
+		let id = $(this).parents(".interviewee").attr("interviewee-id");
+		let interviewee = scope.options.interviewees[id];
+		if (interviewee.disabled) return;
+
+		let options = Object.assign({ interviewee: scope.options.interviewees[id] }, scope.options.interviewViewOptions);
+		
+		// Create and push an InterviewView
+		let interviewView = Object.create(scope.options.interviewViewType.prototype);
+		scope.options.interviewViewType.call(interviewView, options);
+		
+		scope.selectedIntervieweeID = id;
+		scope.application.push(interviewView, {"transition":"slideLeft"});
+	});
+	
+	// Make empty copies of the prototype
+	for (let i in this.options.interviewees)
+	{
+		let interviewee = this.options.interviewees[i];
+		
+		let obj = pt.clone(true)
+					.removeClass("interviewee-prototype")
+					.addClass("interviewee")
+					.attr("interviewee-id", i);
+		obj.appendTo(pt.parent());
+	}
+	
+	// Hide the prototype
+	pt.hide();
+	
+	// Initialize the interviewees object
+	for (let i in this.options.interviewees)
+	{
+		let interviewee = this.options.interviewees[i];
+		
+		// Set interview time limit
+		if (interviewee.timeRemaining === undefined)
+		{
+			interviewee.timeRemaining = this.options.interviewTimeLimit;
+		}
+	}
+}
+
+/**
+ * This function is called whenever the view was previously not shown, but now is shown.
+ * @override
+ */
+IntervieweeSelectionView.prototype.onShow = function()
+{
+	let scope = this;
+	this.DOMObject.find(".interviewee").each(function() {
+		let id = $(this).attr("interviewee-id");
+		let interviewee = scope.options.interviewees[id];
+		let orgChartAttrs = {"pos":interviewee.title, "img":interviewee.profileImage, "name":interviewee.name}
+		
+		$(this).find(".name").text(interviewee.name);
+		$(this).find(".title").text(interviewee.title)
+		$(this).find(".title").click(orgChartAttrs, window.orgChart.showChart);
+		$(this).find(".image").attr("src", interviewee.profileImage);
+		$(this).find(".time").text(formatTime(interviewee.timeRemaining));
+		
+		$(this).toggleClass("interviewee-disabled", interviewee.disabled == true);
+	});
+}
+
+/**
+ * @property {(boolean|number)} selectedIntervieweeID - The ID of the interviewee that was selected, or false if no interviewee is currently selected.
+ * @see onPopTo
+ */
+IntervieweeSelectionView.prototype.selectedIntervieweeID = false;
+
+/**
+ * This function is called (before onShow) when this view is popped back to from an InterviewView.
+ * @param {Interviewee} interviewee - The updated Interviewee passed back from the InterviewView.
+ */
+IntervieweeSelectionView.prototype.onPopTo = function(interviewee)
+{
+	if (this.selectedIntervieweeID !== false)
+	{
+		this.options.interviewees[this.selectedIntervieweeID] = interviewee;
+		
+		this.selectedIntervieweeID = false;
+	}
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="IntervieweeSelectionView.html">IntervieweeSelectionView</a></li><li><a href="InterviewView.html">InterviewView</a></li><li><a href="OrgChart.html">OrgChart</a></li><li><a href="StackApplication.html">StackApplication</a></li><li><a href="StackView.html">StackView</a></li><li><a href="Styling.html">Styling</a></li><li><a href="TextMessageView.html">TextMessageView</a></li><li><a href="VideoMessageView.html">VideoMessageView</a></li></ul><h3>Global</h3><ul><li><a href="global.html#extend">extend</a></li><li><a href="global.html#formatTime">formatTime</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jun 24 2018 14:59:01 GMT-0700 (PDT)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

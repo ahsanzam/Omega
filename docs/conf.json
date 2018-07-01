@@ -1,0 +1,22 @@
+{
+    "plugins": ["ignorePHP"],
+    "recurseDepth": 10,
+    "source": {
+        "includePattern": ".+\\.js(doc|x)?$",
+		"include": [".", "README.md"],
+		"exclude": ["lib", "docs", "InterviewTest"]
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    },
+	"opts": {
+		"destination": "./docs/",
+		"recurse": true
+	}
+}

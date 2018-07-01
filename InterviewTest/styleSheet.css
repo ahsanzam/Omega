@@ -1,0 +1,52 @@
+body{
+	margin:0;
+	padding-bottom:30px;
+}
+#application{
+	width:95%;
+	margin:auto;
+}
+.titles{
+	font-family: 'Merriweather', serif;
+}
+body {
+	background-color: #eee;
+}
+
+.text-message-content {
+	background-color: lavender;
+}
+
+.video-element {
+	background-color: brown;
+}
+
+.interviewee {
+	background-color: #D1E3D1;
+	background-color: lavender;
+}
+
+.interviewee-disabled {
+	background-color: lightgray;
+	filter: grayscale(100%);
+}
+
+.interviewee-disabled > * {
+	cursor: default;
+}
+
+.video-container {
+	background-color: brown;
+}
+
+.question-list {
+	background-color: #ddd;
+}
+
+.question-disabled {
+	color: #777;
+}
+
+.question-disabled > a {
+	cursor: default;
+}

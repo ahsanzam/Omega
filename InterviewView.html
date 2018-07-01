@@ -1,0 +1,135 @@
+<style>
+	.interview-view-header {
+		margin-top: 30px;
+		margin-bottom: 15px;
+		font-family: "Tajawal";
+		display:flex;
+		flex-direction:row;
+	}
+	
+	.interview-view-title {
+		font-size: 30px;
+		font-weight: bold;
+	}
+
+	.interviewee-disabled {
+		background-color: transparent;
+	}
+	.time-container{
+		font-size: 18px;
+		margin-left: 80px;
+		padding:4px;
+		border-radius:5px;
+	}
+		.interviewee-disabled-message{
+			/* animation: blinker 2s linear infinite; */
+			background-color: rgb(250, 100, 100);
+			
+			border-radius: 20px;
+			padding:8px;
+			text-align:center;
+			font-size:1.2em;
+		}
+		@keyframes blinker{
+			20%{
+				background-color:#ED1233;
+			}
+		}
+		#time-instruction{
+			font-style:italic;
+			margin:0;
+		}
+	.container{
+		display:flex;
+		align-items:center;
+		flex-direction:row;
+		margin-bottom:15px;
+		height:60vh;
+		background-color:#4C3523;
+	}
+		.video-container{
+			display:flex;
+			align-items:center;
+			height:100%;
+			color:white;
+			width:70%;
+			position:relative;
+		}
+			.video-prompt, .video-error{
+				color:white;
+				text-align:center;
+			}
+				.icon{
+					margin:auto;
+					width:50%;
+				}
+			.interview-video{
+				width:100%;
+				max-height:100%;
+			}
+			
+		.question-list {
+			width:30%;
+			height:100%;
+			background-color:#BAAB68;
+			text-align:left;
+			font-family: "Tajawal";
+			padding: 0;
+			padding-left: 20px;
+			padding-right: 20px;
+		    overflow: scroll;
+		}
+			.question-list ul {
+				padding: 0;
+			}
+			.question-disabled {
+				color: red;
+			}
+			li{
+				list-style-type:none;
+				padding:8px;
+			}
+				li > a{
+					cursor:pointer;
+				}
+			
+</style>
+
+<div class="interview-view-header">
+	<span class="interview-view-title sub-titles">Interviewing <span class="name">NAME</span> [<span class="title">TITLE</span>]</span>
+	<span class="time-container">
+		<span class="time">X:XX</span> Remaining
+		<p id="time-instruction">Time begins with the first question selected</p>
+	</span> 
+</div>
+	
+<p class="interviewee-disabled-message sub-titles" hidden>Time's up. Please choose another interviewee.</p>
+
+
+<div class="container">
+	<div class="video-container">
+		<div class="video-prompt center-horz-vert">
+			<img class="icon" src="../assets/video-player.png">
+			<br />
+			<p class="sub-titles">Please select a video option on the right.</p> 
+		</div>	
+		<div class="video-error center-horz-vert" hidden>
+			<img class="icon" style="width:90%" src="../assets/broken-video.png">
+			<br />
+			<p class="sub-titles">Video link is broken.</p>
+		</div>	
+		<video class="interview-video center-horz-vert" autoplay hidden>
+			<!-- <source class="interview-video-src" type="video/mp4"> -->
+		</video>
+	</div>
+	<div class="question-list">
+		<ul>
+			<li class="question-prototype">
+				<a class="question-prompt question-button"></a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div style="width:100%; text-align:center;">
+	<input type="button" class="back gen-button center-button-full-width success sub-titles" value="back" />
+</div>

@@ -1,0 +1,49 @@
+<style>
+	#chosenPerson{
+		border-right:1px solid black;
+		position:absolute;
+		left:0;
+		top:0;
+		display:flex;
+		flex-direction:column;
+		align-content:stretch;
+		width:30%;
+		height:100%;
+		text-align:center;
+	}
+	#chosenPerson > #personImage{
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		flex-grow:100;
+	}
+	#chosenPerson > h1{
+		width:100%;
+		margin-top:15px;
+		margin-bottom: 5px;
+	}
+	#chosenPerson > h2{
+		width:100%;
+		margin-bottom: 2px;
+	}
+	#chosenPerson > h3{
+		width:100%;
+		margin-top: 2px;
+	}
+	#orgGraph{
+		width:70%;
+		height:100%;
+		position:absolute;
+		top:0;
+		right:0;
+	}
+</style>
+<div id="chosenPerson">
+	<h1 class="sub-titles">Omega Corp.</h1>
+	<h2 class="sub-titles" id="name" >Selected person</h2>
+	<h3 class="sub-titles" id="pos">Position</h3>
+	<div id="personImage"></div>
+</div>
+<div id="orgGraph">
+</div>
+	

@@ -1,0 +1,46 @@
+[
+	{
+		"name": "CEO",
+		"parent": "null",
+		"children": [
+			{
+				"name": "V.P. Engineering",
+				"parent": "CEO",
+				"children": [
+				  {
+				    "name": "Manager Hardware Development",
+				    "parent": "V.P. Engineering"
+				  },
+				  {
+				    "name": "Manager Software Design",
+				    "parent": "V.P. Engineering"
+				  }
+				]
+			},
+			{
+				"name": "V.P. Research and Development",
+				"parent": "CEO"
+			},
+			{
+				"name": "V.P. Production",
+				"parent": "CEO",
+				"children": [
+				  {
+				    "name": "Manager Quality Control",
+				    "parent": "CEO"
+				  }
+			    ]
+		    },
+			{
+				"name": "V.P. Sales and Promotion",
+				"parent": "CEO",
+				"children": [
+					{
+						"name":"Manager Marketing Research",
+						"parent":"Chief Software Development"
+					}
+				]
+			}
+		]
+	}
+]
