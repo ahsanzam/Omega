@@ -1,8 +1,8 @@
 <link href="https://fonts.googleapis.com/css?family=Tajawal|Merriweather" rel="stylesheet">
-
+<link rel="shortcut icon" href="/assets/favicon.ico">
 <script>
 	<?php
-		require_once(__DIR__ . '/js/include.js');
+		require_once(__DIR__ . "/js/include.js");
 		require_once(__DIR__ . "/js/InterviewApplication.js");
 	?>
 	
