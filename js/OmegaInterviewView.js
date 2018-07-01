@@ -98,11 +98,17 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 				if (!scope.options.canRepeat)
 				{
 					scope.answeringQuestion = false;
-					question.disabled = true;
-					$(this).toggleClass("question-disabled", question.disabled == true);
-					// scope.stopClock();
+				}
+				if (scope.currQuestion && scope.currQuestion.endInterview) {
+					interviewee.timeRemaining = 0;
 				}
 			});
+			
+			if (!scope.options.canRepeat)
+			{
+				question.disabled = true;
+				$(this).toggleClass("question-disabled", question.disabled == true);
+			}
 
 			// Start the clock, if necessary
 			if (!scope.isClockRunning())

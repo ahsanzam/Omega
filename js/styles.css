@@ -69,8 +69,8 @@
 		width:20px;
 		height:20px;
 		position:absolute;
-		right:5px;
-		top:5px;
+		right:10px;
+		top:10px;
 		cursor:pointer;
 		background-image:url('assets/cancel.png');
 		background-size:cover;
