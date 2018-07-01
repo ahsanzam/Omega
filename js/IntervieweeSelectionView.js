@@ -59,8 +59,12 @@ IntervieweeSelectionView.prototype.onAddToApplication = function()
 		}
 	}
 	function setUpdosanddonts(data){
-		$("#dos").html(data['good']);
-		$("#donts").html(data['bad']);
+		data['good'].forEach(function(obj){
+			$("<li></li>").html(obj).appendTo("#dos");
+		});
+		data['bad'].forEach(function(obj){
+			$("<li></li>").html(obj).appendTo("#donts");
+		});
 		$('#dosanddonts').click(()=>{$('#dosanddontscontainer').attr('hidden',false)});
 		$('<div class="floaterExitButton"></div>').appendTo('#dosanddontsbox').click(()=>{$('#dosanddontscontainer').attr('hidden',true)});
 		$("#dosanddontscontainer").click(()=>{$('#dosanddontscontainer').attr('hidden',true)});

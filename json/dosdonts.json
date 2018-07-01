@@ -1,5 +1,30 @@
 {
 	"good":
-	"Be professional (start with a proper greeting and maintain a business-like demeanor). Initially, focus on understanding.  Ask enough background questions to get at least a basic understanding of how things work before asking assessment questions. Ask about strengths as well as weaknesses. Assess readiness for change.  From whom will you receive resistance?  Are they open to small incremental change or revolutionary change? Have a logic and flow to your line of questioning (e.g., Macro to Micro).  Questions should follow naturally rather than drastically jumping from topic to topic.  It should seem more like a conversation than a press conference. Take notes. Use open-ended questions to allow for greater depth in their answers. Paraphrase to ensure accuracy of understanding. Close the interview in a professional manner.",
-	"bad": "Don't be too informal or overly uptight. Don't allow preconceived ideas from previous interviews to taint your questions for future interviews.  Allow each interviewee the opportunity to give background information and a fresh perspective on organizational challenges. Don't ask about problems too early in the interview.  Ask enough questions to demonstrate that you understand how things work and what works well before you ask about areas for change. Don't engage in a \"witch hunt\" by accusing the interviewee or asking him/her to blame someone.  Usually, there are systemic, cultural, structural, and/or interpersonal issues that are not the responsibility of just one individual. Don't phrase questions in a way that increases defensiveness. Don't share information from previous interviews (violate a sense of confidentiality)-it reduces the current interviewee's willingness to share information. Don't interrupt. Don't ask Yes/No type questions."
+		[
+			"Be professional (start with a proper greeting and maintain a business-like demeanor).", 
+			"Initially, focus on understanding.", 
+			"Ask enough background questions to get at least a basic understanding of how things work before asking assessment questions.", 
+			"Ask about strengths as well as weaknesses.", 
+			"Assess readiness for change.", 
+			"From whom will you receive resistance?  Are they open to small incremental change or revolutionary change?", 
+			"Have a logic and flow to your line of questioning (e.g., Macro to Micro).",
+			"Questions should follow naturally rather than drastically jumping from topic to topic.  It should seem more like a conversation than a press conference.", 
+			"Take notes.", 
+			"Use open-ended questions to allow for greater depth in their answers.", 
+			"Paraphrase to ensure accuracy of understanding.", 
+			"Close the interview in a professional manner."
+		],
+	"bad": 
+		[
+			"Don't be too informal or overly uptight.", 
+			"Don't allow preconceived ideas from previous interviews to taint your questions for future interviews.", 
+			"Allow each interviewee the opportunity to give background information and a fresh perspective on organizational challenges.", 
+			"Don't ask about problems too early in the interview.", 
+			"Ask enough questions to demonstrate that you understand how things work and what works well before you ask about areas for change.", 
+			"Don't engage in a \"witch hunt\" by accusing the interviewee or asking him/her to blame someone.  Usually, there are systemic, cultural, structural, and/or interpersonal issues that are not the responsibility of just one individual.", 
+			"Don't phrase questions in a way that increases defensiveness.", 
+			"Don't share information from previous interviews (violate a sense of confidentiality)-it reduces the current interviewee's willingness to share information.", 
+			"Don't interrupt.", 
+			"Don't ask Yes/No type questions."
+		]
 }
