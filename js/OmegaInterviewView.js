@@ -99,6 +99,7 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 				{
 					scope.answeringQuestion = false;
 				}
+				console.log(scope.currQuestion);
 				if (scope.currQuestion && scope.currQuestion.endInterview) {
 					interviewee.timeRemaining = 0;
 				}
