@@ -76,7 +76,7 @@ IntervieweeSelectionView.prototype.onAddToApplication = function()
 	  success:function(data){
 		setUpdosanddonts(data);
 	  },
-	  error: function(){ alert('Invalid JSON or org_chart file missing.') }
+	  error: function(){ alert("Invalid JSON or do's and don'ts file missing.") }
 	});
 }
 
