@@ -197,8 +197,8 @@ OmegaIntervieweeSelectionView.prototype.ChartMaker = function(container, data){
 		nodeEnter.append("circle").attr("r", 1e-6).style("fill-opacity", 1);
 
 		nodeEnter.append("foreignObject")
-				    .attr("width", 70)
-				    .attr("height", 20).attr("x", 15).attr("y",-15)//function(d) { return d.children || d._children ? -13 : 13; })
+				    .attr("width", "5em")
+				    .attr("height", "100%").attr("x", 15).attr("y",-15)//function(d) { return d.children || d._children ? -13 : 13; })
 					.attr("dy", ".2em")
 					.attr("text-anchor", "bottom")//function(d) { return d.children || d._children ? "end" : "start"; })
 					.text(function(d) { return d.name; })
