@@ -191,10 +191,9 @@ OmegaIntervieweeSelectionView.prototype.ChartMaker = function(container, data){
 							.append("g")
 							.attr("class", "node")
 							.attr("transform", function(d) { return "translate(" + source.x0 + "," + source.y0 + ")"; })
-							.on("mouseover",hover)
 							.on("click",click); 
 
-		nodeEnter.append("circle").attr("r", 1e-6).style("fill-opacity", 1);
+		nodeEnter.append("circle").attr("r", 1e-6).style("fill-opacity", 1).on("mouseover",hover);
 
 		nodeEnter.append("foreignObject")
 				    .attr("width", "6em")
