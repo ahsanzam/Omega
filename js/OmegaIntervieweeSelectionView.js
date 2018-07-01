@@ -191,13 +191,14 @@ OmegaIntervieweeSelectionView.prototype.ChartMaker = function(container, data){
 							.append("g")
 							.attr("class", "node")
 							.attr("transform", function(d) { return "translate(" + source.x0 + "," + source.y0 + ")"; })
+							.on("mouseover",hover)
 							.on("click",click); 
 
-		nodeEnter.append("circle").attr("r", 1e-6).style("fill-opacity", 1).on("mouseover",hover);
+		nodeEnter.append("circle").attr("r", 1e-6).style("fill-opacity", 1);
 
 		nodeEnter.append("foreignObject")
 				    .attr("width", "6em")
-				    .attr("height", "100%").attr("x", 15).attr("y",-15)//function(d) { return d.children || d._children ? -13 : 13; })
+				    .attr("height", "6em").attr("x", 15).attr("y",-15)//function(d) { return d.children || d._children ? -13 : 13; })
 					.attr("dy", ".2em")
 					.attr("text-anchor", "bottom")//function(d) { return d.children || d._children ? "end" : "start"; })
 					.text(function(d) { return d.name; })
