@@ -107,7 +107,7 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 			if (!scope.options.canRepeat)
 			{
 				question.disabled = true;
-				$(this).toggleClass("question-disabled", question.disabled == true);
+				$(this).parents(".question").toggleClass("question-disabled", question.disabled == true);
 			}
 
 			// Start the clock, if necessary
