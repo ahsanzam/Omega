@@ -150,6 +150,7 @@ InterviewView.prototype.onShow = function()
 	// Header
 	this.DOMObject.find(".name").text(interviewee.name);
 	this.DOMObject.find(".title").text(interviewee.title);
+	this.DOMObject.find(".container").css('background-image','url(images/'+interviewee.background+')');
 	
 	// Questions
 	this.DOMObject.find(".question").each(function() {

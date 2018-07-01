@@ -31,7 +31,7 @@ var InterviewApplication = function(container, toStyle) {
 		title: "Omega",
 		continuePrompt: "Begin",
 		nextView: videoView,
-		transition: "slideLeft",
+		transition: "slideLeft"
 	});
 	
 	window.userScore = 0;

@@ -17,10 +17,6 @@ body {
 	background-color: lavender;
 }
 
-.video-element {
-	background-color: brown;
-}
-
 .interviewee {
 	background-color: #D1E3D1;
 	background-color: lavender;
@@ -35,9 +31,6 @@ body {
 	cursor: default;
 }
 
-.video-container {
-	background-color: brown;
-}
 
 .question-list {
 	background-color: #ddd;
