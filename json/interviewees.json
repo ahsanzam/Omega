@@ -212,7 +212,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -220,7 +220,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "0",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know. Who do you suggest I interview next?",
@@ -228,7 +228,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "-2",
-                "endInterview": false
+                "endInterview": true
             }
         ]
     },
@@ -424,7 +424,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -432,7 +432,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "0",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -440,7 +440,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "1",
-                "endInterview": false
+                "endInterview": true
             }
         ]
     },
@@ -707,7 +707,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -715,7 +715,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "0",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -723,7 +723,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "1",
-                "endInterview": false
+                "endInterview": true
             }
         ]
     },
@@ -938,7 +938,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -946,7 +946,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "0",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -954,7 +954,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "1",
-                "endInterview": false
+                "endInterview": true
             }
         ]
     },
@@ -1197,7 +1197,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -1205,7 +1205,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "1",
-                "endInterview": false
+                "endInterview": true
             }
         ]
     },
@@ -1417,7 +1417,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -1425,7 +1425,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "0",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -1433,7 +1433,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "1",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "What do you think of the new VP of R and D?  Do you think she'll last long?",
@@ -1663,7 +1663,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -1671,7 +1671,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "0",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -1679,7 +1679,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "1",
-                "endInterview": false
+                "endInterview": true
             }
         ]
     },
@@ -1872,7 +1872,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -1880,7 +1880,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "0",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know.  Who do I interview next?",
@@ -1888,7 +1888,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "1",
-                "endInterview": false
+                "endInterview": true
             }
         ]
     },
@@ -2047,7 +2047,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "2",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all.  I think we're done.",
@@ -2055,7 +2055,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "0",
-                "endInterview": false
+                "endInterview": true
             },
             {
                 "prompt": "That's all I need to know.  Who would you suggest I interview next?",
@@ -2063,7 +2063,7 @@
                 "type": "c",
                 "hidden": false,
                 "score": "1",
-                "endInterview": false
+                "endInterview": true
             }
         ]
     }
