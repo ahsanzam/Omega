@@ -1,4 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Tajawal|Merriweather" rel="stylesheet">
+<link href="lib/jquery-ui-flick/jquery-ui-flick.min.css" rel="stylesheet">
+<link href="lib/jquery-ui-flick/jquery-ui.min.css" rel="stylesheet">
+
 <link rel="shortcut icon" href="/assets/favicon.ico">
 <script>
 	<?php
