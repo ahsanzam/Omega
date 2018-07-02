@@ -51,7 +51,7 @@ InterviewApplication.prototype.triggerInterviewEvent = function(eventName)
 	// iterate through all interview questions
 	for (let i in this.interviewees)
 	{
-		let intervieweeQuestions = this.interviewees[i];
+		let intervieweeQuestions = this.interviewees[i].questions;
 		for (let j in intervieweeQuestions)
 		{
 			question = intervieweeQuestions[j];
