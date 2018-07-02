@@ -92,8 +92,17 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 
 			// Disable the question only when video is finished
 			scope.DOMObject.find(".interview-video").on('ended', function () {
-				if (scope.currQuestion && scope.currQuestion.endInterview) {
-					interviewee.timeRemaining = 0;
+				if (scope.currQuestion)
+				{
+					if (scope.currQuestion.endInterview) {
+						interviewee.timeRemaining = 0;
+					}
+					if (scope.currQuestion.triggerEvents) {
+						for (var i in scope.currQuestion.triggerEvents) {
+							let event = scope.currQuestion.triggerEvents[i];
+							scope.application.triggerInterviewEvent(event);
+						}
+					}
 				}
 				scope.lastVideoEndTime = scope.options.interviewee.timeRemaining;
 				if(scope.idleVideo){
@@ -124,15 +133,18 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 	for (let i in interviewee.questions)
 	{
 		let question = interviewee.questions[i];
-				
-		let obj = pt.clone(true)
-					.removeClass("question-prototype")
-					.addClass("question")
-					.attr("question-id", i);
-		$(obj).css("border-bottom","1px solid black"); 
-		obj.appendTo(pt.parent());
-		if(!this.application.interviewees[this.options.interviewee.name][question.prompt])	//set pausedAt value to 0 (initial) if not already set
-			this.application.interviewees[this.options.interviewee.name][question.prompt] = 0; 
+		
+		if (question.hidden !== true)
+		{
+			let obj = pt.clone(true)
+						.removeClass("question-prototype")
+						.addClass("question")
+						.attr("question-id", i);
+			$(obj).css("border-bottom","1px solid black"); 
+			obj.appendTo(pt.parent());
+			if(!this.application.interviewees[this.options.interviewee.name][question.prompt])	//set pausedAt value to 0 (initial) if not already set
+				this.application.interviewees[this.options.interviewee.name][question.prompt] = 0; 
+		}
 	}
 	
 	// Hide the prototype

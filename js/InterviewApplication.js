@@ -7,10 +7,10 @@
 var InterviewApplication = function(container, toStyle) {
 	StackApplication.call(this, container);
 	
-	let interviewees = <?php require(__DIR__ . "/../json/interviewees.json"); ?>;
+	this.interviewees = <?php require(__DIR__ . "/../json/interviewees.json"); ?>;
 	
 	let selectionView = new OmegaIntervieweeSelectionView({
-		interviewees: interviewees,
+		interviewees: this.interviewees,
 		interviewViewType: OmegaInterviewView,
 		interviewViewOptions: {
 			canInterrupt: false,
@@ -41,3 +41,24 @@ var InterviewApplication = function(container, toStyle) {
 	this.show(textView);
 }
 extend(StackApplication, InterviewApplication);
+
+/**
+ * Trigger an interview event, which may enable new questions for some interviewees.
+ * @param {string} eventName - The event to trigger.
+ */
+InterviewApplication.prototype.triggerInterviewEvent = function(eventName)
+{
+	// iterate through all interview questions
+	for (let i in interviewees)
+	{
+		let intervieweeQuestions = interviewees[i];
+		for (let j in intervieweeQuestions)
+		{
+			question = intervieweeQuestions[j];
+			if (question.revealOnEvent == eventName)
+			{
+				question.hidden = false;
+			}		
+		}
+	}
+}
