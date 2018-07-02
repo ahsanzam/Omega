@@ -93,7 +93,18 @@
 				li > a{
 					cursor:pointer;
 				}
-			
+	
+	.feedback-dialog {
+		font-family: Tajawal, sans-serif;
+		border: 2px solid goldenrod !important;
+	}
+	.feedback-dialog .ui-dialog-titlebar-close {
+		border: 1px solid goldenrod !important;
+	}
+	.feedback-dialog .ui-dialog-titlebar-close:hover {
+		background-color: goldenrod !important;
+	}
+
 </style>
 
 <div class="interview-view-header">
@@ -132,5 +143,8 @@
 	</div>
 </div>
 <div style="width:100%; text-align:center;">
+	<input type="button" class="feedback-button gen-button center-button-full-width success sub-titles" value="Feedback" hidden />
 	<input type="button" class="back gen-button center-button-full-width success sub-titles" value="back" />
 </div>
+
+<div id="feedback-dialog" title="Interview Feedback">FEEDBACK CONTENT HERE</div>

@@ -159,6 +159,26 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 				scope.application.interviewees[scope.options.interviewee.name][scope.currQuestion.prompt] = scope.DOMObject.find(".interview-video")[0].currentTime;
 			scope.application.pop(interviewee, "slideRight");
 		});
+	
+	// Feedback Dialog
+	this.feedbackDialog = this.DOMObject.find("#feedback-dialog")
+		.html(interviewee.feedback)
+		.dialog({
+			autoOpen: false,
+			resizable: false,
+			draggable: false,
+			width: "50vw",
+			maxHeight: 600,
+			classes: {
+				"ui-dialog": "feedback-dialog"
+			},
+			position: { my: "center top", at: "center bottom", of: this.DOMObject.find(".interview-view-header") }
+		});
+	this.DOMObject.find(".feedback-button")
+		.hide()
+		.click(function() {
+			scope.feedbackDialog.dialog("open");
+		});	
 }
 
 /**
@@ -217,6 +237,11 @@ OmegaInterviewView.prototype.updateTimeRemaining = function()
 	
 	this.DOMObject.toggleClass("interview-view-disabled", interviewee.disabled == true);
 	this.DOMObject.find(".interviewee-disabled-message").toggle(interviewee.disabled == true);
+	
+	let shouldDisplayFeedback = interviewee.feedback !== false && interviewee.disabled == true;
+	if (shouldDisplayFeedback && this.DOMObject.find(".feedback-button:hidden"))
+		this.feedbackDialog.dialog("open");
+	this.DOMObject.find(".feedback-button").toggle(shouldDisplayFeedback);
 }
 
 /**

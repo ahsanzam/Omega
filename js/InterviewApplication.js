@@ -57,7 +57,6 @@ InterviewApplication.prototype.triggerInterviewEvent = function(eventName)
 			question = intervieweeQuestions[j];
 			if (question.revealOnEvent == eventName)
 			{
-				console.log(question.prompt);
 				question.hidden = false;
 			}		
 		}
