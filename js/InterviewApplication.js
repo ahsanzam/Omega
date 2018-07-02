@@ -49,7 +49,7 @@ extend(StackApplication, InterviewApplication);
 InterviewApplication.prototype.triggerInterviewEvent = function(eventName)
 {
 	// iterate through all interview questions
-	for (let i in interviewees)
+	for (let i in this.interviewees)
 	{
 		let intervieweeQuestions = interviewees[i];
 		for (let j in intervieweeQuestions)
