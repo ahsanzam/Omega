@@ -49,7 +49,17 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 	this.firstQuestion = true;
 	if(!this.application.interviewees[this.options.interviewee.name])
 		this.application.interviewees[this.options.interviewee.name] = {};
-
+	
+	// Don't run clock while video is loading
+	let videoElement = scope.DOMObject.find(".interview-video")[0];
+	videoElement.addEventListener("waiting", function() {
+		if (scope.currQuestion) // unless it's the idle video
+			scope.stopClock();
+	});
+	videoElement.addEventListener("playing", function() {
+		scope.startClock();
+	});
+	
 	// Lock question list scrolling as necessary
 	let questionList = $(".question-list")[0];
 	questionList.addEventListener("scroll", function() {
