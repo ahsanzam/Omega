@@ -89,7 +89,11 @@ OmegaIntervieweeSelectionView.prototype.onShow = function()
 	// unset container position: relative
 	this.DOMObject.css("position", "unset");
 	
-	if(this.orgChartMade) return;
+	if(this.orgChartMade)
+	{
+		scope.showDetails(scope.options.interviewees[0]['title']);
+		return;
+	}
 	
 	let scope = this;
 	$.ajax({
