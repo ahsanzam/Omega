@@ -52,10 +52,12 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 	
 	// Don't run clock while video is loading
 	let videoElement = scope.DOMObject.find(".interview-video")[0];
-	videoElement.addEventListener("waiting", function() {
+	let loadingListener = function() {
 		if (scope.currQuestion) // unless it's the idle video
 			scope.stopClock();
-	});
+	};
+	videoElement.addEventListener("waiting", loadingListener);
+	videoElement.addEventListener("loadStart", loadingListener);
 	videoElement.addEventListener("playing", function() {
 		scope.startClock();
 	});
