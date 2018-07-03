@@ -91,7 +91,7 @@ OmegaIntervieweeSelectionView.prototype.onShow = function()
 	
 	if(this.orgChartMade)
 	{
-		this.showDetails(scope.options.interviewees[0]['title']);
+		this.showDetails(this.options.interviewees[0]['title']);
 		return;
 	}
 	
