@@ -50,6 +50,14 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 	if(!this.application.interviewees[this.options.interviewee.name])
 		this.application.interviewees[this.options.interviewee.name] = {};
 
+	// Lock question list scrolling as necessary
+	let questionList = $(".question-list")[0];
+	questionList.addEventListener("scroll", function() {
+		if (scope.questionListScrollPosition !== undefined) {
+			questionList.scrollTop = scope.questionListScrollPosition;
+		}
+	});
+	
 	let pt = this.DOMObject.find(".question-prototype");
 
 	// Setup the question click handler
@@ -85,6 +93,9 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 			// Mark the interview as having began
 			interviewee.began = true;
 			
+			// Record the question list scroll position
+			scope.questionListScrollPosition = questionList.scrollTop;
+			
 			// Play the response video
 			let video = scope.DOMObject.find(".interview-video");
 			video.attr('src',video_location);
@@ -107,11 +118,15 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 						}
 					}
 				}
+				
+				scope.questionListScrollPosition = undefined;
+				
 				scope.lastVideoEndTime = scope.options.interviewee.timeRemaining;
 				if(scope.idleVideo){
 					scope.idleVideo = undefined; 
 					return;
 				}
+				
 				if (!scope.options.canRepeat)
 				{
 					scope.answeringQuestion = false;
