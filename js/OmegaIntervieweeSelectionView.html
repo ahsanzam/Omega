@@ -8,8 +8,9 @@
 		flex-direction:column;
 		align-content:stretch;
 		width:30%;
-		height:100%;
+		height:80%;
 		text-align:center;
+		margin-top: 25px;
 	}
 	#chosenPerson > #personImage{
 		background-size: contain;
@@ -17,6 +18,8 @@
 		background-position: 50% 0;
 		flex-grow:100;
 		margin-right:1vw;
+		max-height: 400px;
+		min-height: 300px;
 	}
 	#chosenPerson > h1{
 		width:100%;
@@ -33,23 +36,27 @@
 	}
 	#orgGraph{
 		width:70%;
-		height:100%;
+		height:80%;
 		position:absolute;
-		top:0;
+		top:10%;
 		right:0;
+		overflow: hidden;
 	}
 	#interviewee-selectionView-container{
-		height:90vh;
+		height:700px;
 		width:100%;
-		position:relative;
 	}
 	#dosanddonts{
-		margin-top:15px; 
-		margin-bottom:15px; 
-		text-align:center; 
-		font-style:italic; 
-		cursor:pointer;
-		color:blue;
+		margin: auto;
+		margin-top:25px; 
+		text-align:center;
+		background-color: #c7c7c7;
+		padding: 10px;
+		border-radius: 10px;
+		cursor: pointer;
+		color: blue;
+		font-weight: bold;
+		font-size: 18px;
 	}
 	#dosanddontscontainer{
 		height:100vh;
@@ -85,6 +92,7 @@
 		<h3 class="sub-titles" style="margin-top:15px; margin-bottom:15px; text-align:center;">Please select an interviewee.</h3>
 		<h2 class="sub-titles" id="name" >Selected person</h2>
 		<h3 class="sub-titles" id="pos">Position</h3>
+		<h3 class="sub-titles" id="time-remaining"><span class="time">XX:XX</span> Remaining</h3>
 		<div id="personImage"></div>
 		<div class="sub-titles" id="dosanddonts">Do's and Don'ts</div>
 	</div>

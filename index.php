@@ -26,8 +26,29 @@
 	<!-- <img id="brand" src='./../assets/ELC_Logo2.png'> -->
 </div>
 <div id="application"></div>
+<div id="footer">
+	<div id="footer-background"></div>
+	<p>&#169; <?php echo date("Y"); ?> University of Southern California Marshall School of Business. All rights reserved.</p>
+	<p>Website by Phillip Nazarian and Ahsan Zaman</p>
+</div>
 
 <style>
+
+	body {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		
+		background-attachment: fixed !important;
+		background: #eee; /* Old browsers */
+		background: -moz-linear-gradient(top, #ddd 0%, #eee 35%, #eee 65%, #ddd 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #ddd 0%,#eee 35%,#eee 65%,#ddd 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #ddd 0%,#eee 35%,#eee 65%,#ddd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	}
+
+
 	.navbar{
 		background-color:black;
 		color:white;
@@ -79,5 +100,29 @@
 			left:0;
 		}
 	}
+
+	#footer {
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+		
+		padding-bottom: 10px;
+	}
+	#footer-background {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		z-index: -1;
+		
+		box-shadow: 0 0 0 55px #ccc;
+	}
+	#footer p {
+		margin: 0;
+		text-align: center;
+		
+		font-size: 13px;
+		color: black;
+	}
+
 </style>
 <link rel="stylesheet" type="text/css" href="js/styleSheet.css">

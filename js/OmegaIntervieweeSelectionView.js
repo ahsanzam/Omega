@@ -86,6 +86,9 @@ OmegaIntervieweeSelectionView.prototype.onAddToApplication = function()
  */
 OmegaIntervieweeSelectionView.prototype.onShow = function()
 {
+	// unset container position: relative
+	this.DOMObject.css("position", "unset");
+	
 	if(this.orgChartMade) return;
 	
 	let scope = this;
@@ -112,6 +115,7 @@ OmegaIntervieweeSelectionView.prototype.showDetails = function(selectedPersonPos
 	//get and set selected person's position, name, and image
 	$("#chosenPerson > #name").html(selectedPerson['name']);
 	$("#chosenPerson > #pos").html(selectedPerson['title']);
+	$("#chosenPerson .time").text(formatTime(selectedPerson.timeRemaining));
 	$("#chosenPerson > #personImage").css("background-image","url("+selectedPerson['profileImage']+")");
 
 	 //empty previous circle if colored in
@@ -167,7 +171,7 @@ OmegaIntervieweeSelectionView.prototype.ChartMaker = function(container, data){
 
 	var svg = d3.select(container).append("svg").attr("width", width + margin.right + margin.left).attr("height", height + margin.top + margin.bottom)
 	  			.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
+				
 	root = data[0];
 	root.x0 = width / 2;
 	root.y0 = 0;

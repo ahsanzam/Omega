@@ -81,6 +81,9 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 				$(".video-error").show();
 				scope.stopClock();
 			});
+
+			// Mark the interview as having began
+			interviewee.began = true;
 			
 			// Play the response video
 			let video = scope.DOMObject.find(".interview-video");
@@ -207,6 +210,10 @@ OmegaInterviewView.prototype.onShow = function()
 	});
 	
 	// Clock
+	if (interviewee.began) {
+		this.startClock();
+		this.idleSince = interviewee.timeRemaining;
+	}
 	this.updateTimeRemaining();
 }
 
