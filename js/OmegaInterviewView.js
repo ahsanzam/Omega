@@ -112,9 +112,9 @@ OmegaInterviewView.prototype.onAddToApplication = function()
 			scope.DOMObject.find(".interview-video").on('ended', function () {
 				if (scope.currQuestion)
 				{
-					if (scope.currQuestion.endInterview) {
-						interviewee.timeRemaining = 0;
-					}
+					// if (scope.currQuestion.endInterview) { //viewing last question should not end interview
+					// 	interviewee.timeRemaining = 0;
+					// }
 					if (scope.currQuestion.triggerEvents) {
 						for (var i in scope.currQuestion.triggerEvents) {
 							let event = scope.currQuestion.triggerEvents[i];

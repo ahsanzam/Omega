@@ -2,8 +2,10 @@
 <link href="lib/jquery-ui-flick/jquery-ui-flick.min.css" rel="stylesheet">
 <link href="lib/jquery-ui-flick/jquery-ui.min.css" rel="stylesheet">
 
-<link rel="shortcut icon" href="/assets/favicon.ico">
+<link rel="shortcut icon" href="assets/favicon.png">
 <script>
+		// require_once(__DIR__ . '/../_lib/Interviewer/include.js');
+	
 	<?php
 		require_once($_SERVER['LIBDIR'] . '/Interviewer/include.js');
 		
