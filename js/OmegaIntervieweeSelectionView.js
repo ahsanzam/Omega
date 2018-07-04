@@ -91,23 +91,34 @@ OmegaIntervieweeSelectionView.prototype.onShow = function()
 	
 	if(this.orgChartMade)
 	{
+		this.colorInIfDone(); //gray out nodes of people with 0 time remaining
 		this.showDetails(this.options.interviewees[0]['title']);
 		return;
 	}
-	
-	let scope = this;
-	$.ajax({
-	  dataType: "json",
-	  url: "json/org_chart.json",
-	  success:function(data){
-  			scope.ChartMaker("#orgGraph",data);
-  			scope.showDetails(scope.options.interviewees[0]['title']);
-  			scope.orgChartMade = true;
-	  },
-	  error: function(){ alert('Invalid JSON or org_chart file missing.') }
-	});
+	else{
+		let scope = this;
+		$.ajax({
+		  dataType: "json",
+		  url: "json/org_chart.json",
+		  success:function(data){
+	  			scope.ChartMaker("#orgGraph",data);
+	  			scope.showDetails(scope.options.interviewees[0]['title']);
+	  			scope.orgChartMade = true;
+		  },
+		  error: function(){ alert('Invalid JSON or org_chart file missing.') }
+		});
+	}
 }
 
+OmegaIntervieweeSelectionView.prototype.colorInIfDone = function(){
+	for(var i in this.options.interviewees){
+		person = this.options.interviewees[i];
+		if(person.timeRemaining == 0){
+			let doneNode = d3.select("#orgGraph svg").selectAll("g.node")[0].filter(function(d,i){ return d.textContent === person['title']})[0];
+			d3.select(doneNode).select('circle').style("fill", "#D7D9D7"); //gray out this person's node
+		}
+	}
+}
 OmegaIntervieweeSelectionView.prototype.showDetails = function(selectedPersonPosition){
 	selectedPerson = undefined;
 	for(var i in this.options.interviewees){
@@ -115,17 +126,18 @@ OmegaIntervieweeSelectionView.prototype.showDetails = function(selectedPersonPos
 			selectedPerson = this.options.interviewees[i];
 	}
 	if(selectedPerson == undefined) return;
-
 	//get and set selected person's position, name, and image
 	$("#chosenPerson > #name").html(selectedPerson['name']);
 	$("#chosenPerson > #pos").html(selectedPerson['title']);
 	$("#chosenPerson .time").text(formatTime(selectedPerson.timeRemaining));
 	$("#chosenPerson > #personImage").css("background-image","url("+selectedPerson['profileImage']+")");
-
 	 //empty previous circle if colored in
-	if(this.currentlySelectedNode)
-		d3.select(this.currentlySelectedNode).select('circle').style("fill", "white");
-
+	if(this.currentlySelectedNode){
+		if(this.selectedPerson.timeRemaining == 0)
+			d3.select(this.currentlySelectedNode).select('circle').style("fill", "#D7D9D7");
+		else
+			d3.select(this.currentlySelectedNode).select('circle').style("fill", "white");
+	}
 	//find person's position on orgChart and color it in
 	this.currentlySelectedNode = d3.select("#orgGraph svg").selectAll("g.node")[0].filter(function(d,i){ return d.textContent === selectedPerson['title']})[0];
 	d3.select(this.currentlySelectedNode).select('circle').style("fill", "red"); //set the fill of person's node to red
